@@ -1,0 +1,210 @@
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  CONTAINER_TEST_IMAGE_SHOWCATALOG: $CI_REGISTRY_IMAGE:showcatalog
+  CONTAINER_TEST_IMAGE_NOTIFICATION: $CI_REGISTRY_IMAGE:notification
+  CONTAINER_TEST_IMAGE_TICKETING: $CI_REGISTRY_IMAGE:ticketing
+  CONTAINER_TEST_IMAGE_USER: $CI_REGISTRY_IMAGE:user
+
+stages:                          
+ - build   
+ - test                      
+ - build-docker-image                   
+ - deploy                       
+                                 
+maven-build:                     
+  image: maven:3-jdk-11          
+  stage: build                   
+  script:
+    - |
+        cd "$CI_PROJECT_DIR/epcsd-spring-notification-solucio"
+        mvn clean install -DskipTests=true
+        cd "$CI_PROJECT_DIR/epcsd-spring-showcatalog-solucio"
+        mvn clean install -DskipTests=true
+        cd "$CI_PROJECT_DIR/epcsd-spring-ticketing-solucio"
+        mvn clean install -DskipTests=true
+        cd "$CI_PROJECT_DIR/epcsd-spring-user-solucio"
+        mvn clean install -DskipTests=true
+
+unit-test:
+  image: maven:3-jdk-11
+  stage: test
+  script:
+    - |
+      cd "$CI_PROJECT_DIR/epcsd-spring-showcatalog-solucio"
+      mvn clean test
+
+sonarqube-check-not:
+  image:
+    name: maven:3-jdk-11
+  stage: test
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"
+    GIT_DEPTH: "0"
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - .sonar/cache
+  script:
+    - mvn -f ./epcsd-spring-notification-solucio/pom.xml clean compile sonar:sonar -Dsonar.projectKey=PDS-GRUPO6-NOTIFICATION
+sonarqube-check-ctl:
+  image:
+    name: maven:3-jdk-11
+  stage: test
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"
+    GIT_DEPTH: "0"
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - .sonar/cache
+  script:
+    - mvn -f ./epcsd-spring-showcatalog-solucio/pom.xml clean verify sonar:sonar -Dsonar.projectKey=PDS-GRUPO6-SHOWCATALOG
+sonarqube-check-tck:
+  image:
+    name: maven:3-jdk-11
+  stage: test
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"
+    GIT_DEPTH: "0"
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - .sonar/cache
+  script:
+    - |
+      mvn -f ./epcsd-spring-showcatalog-solucio/pom.xml clean install -DskipTests=true
+    - mvn -f ./epcsd-spring-ticketing-solucio/pom.xml clean verify sonar:sonar -Dsonar.projectKey=PDS-GRUPO6-TICKETING
+sonarqube-check-usr:
+  image:
+    name: maven:3-jdk-11
+  stage: test
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"
+    GIT_DEPTH: "0"
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - .sonar/cache
+  script:
+    - mvn -f ./epcsd-spring-user-solucio/pom.xml clean verify sonar:sonar -Dsonar.projectKey=PDS-GRUPO6-USER
+
+maven-build-image-notification:
+    image: maven:3-jdk-11
+    stage: build-docker-image  
+    services:
+      - docker:dind
+    script:
+      - |
+          cd "$CI_PROJECT_DIR/epcsd-spring-notification-solucio"
+          mvn package -Pprod
+    artifacts:
+      paths:
+        - $CI_PROJECT_DIR/epcsd-spring-notification-solucio/target/*.jar
+maven-build-image-showcatalog:
+    image: maven:3-jdk-11
+    stage: build-docker-image
+    services:
+      - docker:dind
+    script:
+      - |
+          cd "$CI_PROJECT_DIR/epcsd-spring-showcatalog-solucio"
+          mvn package -Pprod
+    artifacts:
+      paths:
+        - $CI_PROJECT_DIR/epcsd-spring-showcatalog-solucio/target/*.jar
+maven-build-image-ticketing:
+    image: maven:3-jdk-11
+    stage: build-docker-image  
+    services:
+      - docker:dind
+    script:
+      - |
+          cd "$CI_PROJECT_DIR/epcsd-spring-showcatalog-solucio"
+          mvn clean install -DskipTests=true
+          cd "$CI_PROJECT_DIR/epcsd-spring-ticketing-solucio"
+          mvn package -Pprod
+    artifacts:
+      paths:
+        - $CI_PROJECT_DIR/epcsd-spring-ticketing-solucio/target/*.jar
+maven-build-image-user:
+    image: maven:3-jdk-11
+    stage: build-docker-image
+    services:
+      - docker:dind
+    script:
+      - |
+          cd "$CI_PROJECT_DIR/epcsd-spring-user-solucio"
+          mvn package -Pprod
+    artifacts:
+      paths:
+        - $CI_PROJECT_DIR/epcsd-spring-user-solucio/target/*.jar
+
+upload-docker-image-showcatalog:
+  image: docker:latest 
+  stage: build-docker-image 
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  needs: 
+    - maven-build-image-showcatalog 
+  services:
+    - name: docker:dind 
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - cd "$CI_PROJECT_DIR/epcsd-spring-showcatalog-solucio"
+    - docker build -t $CONTAINER_TEST_IMAGE_SHOWCATALOG .
+    - docker push $CONTAINER_TEST_IMAGE_SHOWCATALOG
+    - docker logout
+upload-docker-image-notifications:
+  image: docker:latest 
+  stage: build-docker-image  
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  needs: 
+    - maven-build-image-notification
+  services:
+    - name: docker:dind 
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - cd "$CI_PROJECT_DIR/epcsd-spring-notification-solucio"
+    - docker build -t $CONTAINER_TEST_IMAGE_NOTIFICATION .
+    - docker push $CONTAINER_TEST_IMAGE_NOTIFICATION
+    - docker logout
+upload-docker-image-ticketing:
+  image: docker:latest 
+  stage: build-docker-image 
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  needs: 
+    - maven-build-image-ticketing
+  services:
+    - name: docker:dind 
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - cd "$CI_PROJECT_DIR/epcsd-spring-ticketing-solucio"
+    - docker build -t $CONTAINER_TEST_IMAGE_TICKETING .
+    - docker push $CONTAINER_TEST_IMAGE_TICKETING
+    - docker logout
+upload-docker-image-user:
+  image: docker:latest 
+  stage: build-docker-image  
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  needs: 
+    - maven-build-image-user
+  services:
+    - name: docker:dind 
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - cd "$CI_PROJECT_DIR/epcsd-spring-user-solucio"
+    - docker build -t $CONTAINER_TEST_IMAGE_USER .
+    - docker push $CONTAINER_TEST_IMAGE_USER
+    - docker logout
+
+deploy:
+  stage: deploy
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  script:
+   - aws ecs update-service --region eu-west-3 --cluster pds-grupo6 --service logicservice --force-new-deployment
+  environment: production

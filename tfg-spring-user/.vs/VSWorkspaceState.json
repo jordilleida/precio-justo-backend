@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\edu",
+    "\\src\\main\\java\\edu\\uoc",
+    "\\src\\main\\java\\edu\\uoc\\epcsd",
+    "\\src\\main\\java\\edu\\uoc\\epcsd\\user",
+    "\\src\\main\\java\\edu\\uoc\\epcsd\\user\\application",
+    "\\src\\main\\java\\edu\\uoc\\epcsd\\user\\application\\rest"
+  ],
+  "SelectedNode": "\\src\\main\\java\\edu\\uoc\\epcsd\\user\\application\\rest\\UserRESTController.java",
+  "PreviewInSolutionExplorer": false
+}
