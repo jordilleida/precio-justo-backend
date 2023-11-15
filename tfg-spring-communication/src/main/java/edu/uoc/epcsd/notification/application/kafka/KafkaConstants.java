@@ -10,7 +10,7 @@ public final class KafkaConstants {
     public static final String SEPARATOR = ".";
 
     // topic items
-    public static final String SHOW_TOPIC = "shows";
+    public static final String USER_TOPIC = "users";
 
     // commands
     public static final String COMMAND_ADD = "add";

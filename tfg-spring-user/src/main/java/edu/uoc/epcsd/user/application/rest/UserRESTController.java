@@ -2,9 +2,7 @@ package edu.uoc.epcsd.user.application.rest;
 
 import edu.uoc.epcsd.user.UserNotFoundException;
 
-import edu.uoc.epcsd.user.application.request.LoginRequest;
-
-import edu.uoc.epcsd.user.application.request.RegisterRequest;
+import edu.uoc.epcsd.user.application.request.*;
 import edu.uoc.epcsd.user.domain.*;
 import edu.uoc.epcsd.user.domain.User;
 import edu.uoc.epcsd.user.domain.UserSession;
@@ -13,7 +11,6 @@ import edu.uoc.epcsd.user.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +27,6 @@ public class UserRESTController {
 
     private final UserService userService;
     private final TokenService tokenService;
-
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
         Optional<User> userOptional = userService.findUserByMail(loginRequest.getMail());
@@ -57,6 +53,12 @@ public class UserRESTController {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password.");
     }
 
+    @PostMapping("/logout")
+    public ResponseEntity<Void> logout(@RequestBody LogoutRequest logoutRequest) {
+
+        log.info("User logged out: " + logoutRequest.getUserId());
+        return ResponseEntity.ok().build();
+    }
     @PostMapping("/register")
     public ResponseEntity<Long> Register(@Valid @RequestBody RegisterRequest registerRequest) {
 

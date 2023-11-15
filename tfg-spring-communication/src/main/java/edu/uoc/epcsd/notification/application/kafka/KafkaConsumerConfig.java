@@ -1,6 +1,6 @@
 package edu.uoc.epcsd.notification.application.kafka;
 
-import edu.uoc.epcsd.notification.domain.Show;
+import edu.uoc.epcsd.notification.domain.User;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,9 +25,9 @@ class KafkaConsumerConfig {
     private String bootstrapServers;
 
     @Bean
-    public ConsumerFactory<String, Show> showConsumerFactory() {
+    public ConsumerFactory<String, User> userConsumerFactory() {
 
-        JsonDeserializer<Show> deserializer = new JsonDeserializer<>(Show.class);
+        JsonDeserializer<User> deserializer = new JsonDeserializer<>(User.class);
         deserializer.setRemoveTypeHeaders(false);
         deserializer.addTrustedPackages("*");
         deserializer.setUseTypeMapperForKey(true);
@@ -44,10 +44,10 @@ class KafkaConsumerConfig {
     }
 
     @Bean
-    public KafkaListenerContainerFactory<ConcurrentMessageListenerContainer<String, Show>> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, Show> factory =
+    public KafkaListenerContainerFactory<ConcurrentMessageListenerContainer<String, User>> kafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, User> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(showConsumerFactory());
+        factory.setConsumerFactory(userConsumerFactory());
         return factory;
     }
 }

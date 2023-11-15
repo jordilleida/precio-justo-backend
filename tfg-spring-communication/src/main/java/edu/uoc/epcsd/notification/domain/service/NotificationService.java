@@ -1,9 +1,8 @@
 package edu.uoc.epcsd.notification.domain.service;
 
-import edu.uoc.epcsd.notification.domain.Show;
+import edu.uoc.epcsd.notification.domain.User;
 
 public interface NotificationService {
-
-    boolean notifyShowCreation(Show show);
+    boolean notifyUserRegistered(User user);
 
 }

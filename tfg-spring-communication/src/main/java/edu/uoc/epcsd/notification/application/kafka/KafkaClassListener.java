@@ -1,7 +1,7 @@
 package edu.uoc.epcsd.notification.application.kafka;
 
+import edu.uoc.epcsd.notification.domain.User;
 import edu.uoc.epcsd.notification.domain.service.NotificationService;
-import edu.uoc.epcsd.notification.domain.Show;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -14,10 +14,11 @@ public class KafkaClassListener {
     @Autowired
     private NotificationService notificationService;
 
-    @KafkaListener(topics = KafkaConstants.SHOW_TOPIC + KafkaConstants.SEPARATOR + KafkaConstants.COMMAND_ADD, groupId = "group-1")
-    void showAdded(Show show) {
-        log.trace("showAdded");
+    @KafkaListener(topics = KafkaConstants.USER_TOPIC + KafkaConstants.SEPARATOR + KafkaConstants.COMMAND_ADD, groupId = "group-1")
+    void userAdded(User user) {
 
-        notificationService.notifyShowCreation(show);
+        log.trace("User Added");
+
+        notificationService.notifyUserRegistered(user);
     }
 }
