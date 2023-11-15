@@ -1,4 +1,4 @@
-version: '2'
+version: '3.8'
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -33,16 +33,31 @@ services:
     networks:
       - shared
   
-  db:
+  db_user:
     image: postgres
-    hostname: postgres
+    hostname: postgres_user
     platform: linux/amd64
     restart: always
     ports:
-      - 54320:5432
+      - "54321:5432"
     environment:
-      POSTGRES_USER: epcsd
-      POSTGRES_PASSWORD: epcsd
+      POSTGRES_USER: user_service
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: user_db
+    networks:
+      - shared
+
+  db_communication:
+    image: postgres
+    hostname: postgres_communication
+    platform: linux/amd64
+    restart: always
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_USER: communication_service
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: communication_db
     networks:
       - shared
 

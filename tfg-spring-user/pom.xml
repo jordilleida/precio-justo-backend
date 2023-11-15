@@ -8,7 +8,7 @@
         <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>edu.uoc.epcsd</groupId>
+    <groupId>edu.uoc.epcsd.user</groupId>
     <artifactId>user</artifactId>
     <version>0.0.1-${versionExtra}</version>
     <name>user</name>
@@ -96,7 +96,7 @@
             <activation><activeByDefault>true</activeByDefault></activation>
             <properties>
                 <versionExtra>${maven.build.timestamp}</versionExtra>
-                <dbHost>localhost:54320</dbHost>
+                <dbHost>localhost:54321</dbHost>
                 <kafkaHost>localhost:19092</kafkaHost>
             </properties>
         </profile>
@@ -111,6 +111,12 @@
     </profiles>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

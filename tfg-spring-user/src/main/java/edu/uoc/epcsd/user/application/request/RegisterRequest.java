@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class RegisterRequest {
@@ -19,9 +21,11 @@ public class RegisterRequest {
 
     @Getter
     @NotNull
+    @Email(message = "Email should be valid")
     private final String mail;
     @Getter
     @NotNull
+    @NotBlank(message = "Password cannot be blank")
     private final String password;
 
     

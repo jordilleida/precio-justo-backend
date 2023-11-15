@@ -19,6 +19,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.*;
 @Log4j2
@@ -57,10 +58,7 @@ public class UserRESTController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<Long> Register(@RequestBody RegisterRequest registerRequest) {
-
-        if (!registerRequest.getMail().contains("@"))
-            return ResponseEntity.unprocessableEntity().build();
+    public ResponseEntity<Long> Register(@Valid @RequestBody RegisterRequest registerRequest) {
 
         Optional<User> existingUser = userService.findUserByMail(registerRequest.getMail());
 

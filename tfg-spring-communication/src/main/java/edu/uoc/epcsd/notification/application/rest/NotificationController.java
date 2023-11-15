@@ -16,11 +16,14 @@ public class NotificationController {
 
     private final NotificationService notificationService;
 
+    /*
     @PostMapping("/{id}")
     public ResponseEntity<Boolean> sendShowCreated(@PathVariable Long id) {
         log.trace("sendShowCreated");
         log.info("sendShowCreated " + id);
 
-        return new ResponseEntity<>(notificationService.notifyShowCreation(id), HttpStatus.OK);
+        return new ResponseEntity<>(notificationService.notifyShowCreation(new Show()), HttpStatus.OK);
     }
+
+     */
 }

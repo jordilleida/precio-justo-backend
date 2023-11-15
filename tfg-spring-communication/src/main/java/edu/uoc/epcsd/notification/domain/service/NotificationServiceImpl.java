@@ -17,25 +17,7 @@ import edu.uoc.epcsd.notification.domain.User;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @Service
 public class NotificationServiceImpl implements NotificationService {
-
-    @Value("${showCatalog.getShowDetails.url}")
-    private String showCatalogUrl;
-
     private final UserService userService;    // mock service
-
-    public boolean notifyShowCreation(Long id) {
-
-        // retrieve show details from showCatalog microservice
-        try {
-            ResponseEntity<Show> showResponseEntity = new RestTemplate().getForEntity(showCatalogUrl, Show.class, id);
-            notifyNewShowUsersWithFavouriteCategory(showResponseEntity.getBody());
-            return true;
-
-        } catch (RestClientException e) {
-            return false;
-        }
-    }
-
     @Override
     public boolean notifyShowCreation(Show show) {
 

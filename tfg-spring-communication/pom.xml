@@ -67,6 +67,7 @@
             <activation><activeByDefault>true</activeByDefault></activation>
             <properties>
                 <versionExtra>${maven.build.timestamp}</versionExtra>
+                <dbHost>localhost:54322</dbHost>
                 <kafkaHost>localhost:19092</kafkaHost>
                 <catalogHost>localhost:18081</catalogHost>
             </properties>
