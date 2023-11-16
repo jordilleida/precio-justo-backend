@@ -70,7 +70,7 @@ public class UserRESTController {
 
         //el rol del usuario por defecto es Buyer
         Set<Role> roles = new HashSet<>();
-                 roles.add(new Role(1L, Rol.BUYER));
+                 roles.add(new Role(null, Rol.BUYER));
 
         User user = new User(null, registerRequest.getName(), registerRequest.getSurname(),
                 registerRequest.getMail(), registerRequest.getPassword(), roles, false);

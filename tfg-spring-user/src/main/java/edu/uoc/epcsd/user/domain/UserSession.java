@@ -22,6 +22,7 @@ public class UserSession implements Serializable{
     
     public String getString() {
     	return "{" +
+				"\"id\":\"" + user.getId() +
     			"\"mail\":\"" + user.getEmail() +
     			"\", \"roles\":\"" + user.getRoles() +
     			"\", \"expire\":\"" + expireDate.format(DateTimeFormatter.ISO_DATE_TIME)+
