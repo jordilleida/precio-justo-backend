@@ -6,6 +6,6 @@ import org.json.JSONObject;
 import java.security.GeneralSecurityException;
 
 public interface TokenService {
-    String encrypt(UserSession userSession)throws GeneralSecurityException;
-    JSONObject decrypt(String token)throws GeneralSecurityException;
+    String createToken(UserSession session);
+    JSONObject solveToken(String token);
 }

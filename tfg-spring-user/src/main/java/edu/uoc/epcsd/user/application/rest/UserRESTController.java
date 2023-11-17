@@ -44,7 +44,7 @@ public class UserRESTController {
             session.setExpireDate(LocalDateTime.now().plusDays(1));
 
             try {
-                String token = tokenService.encrypt(session);
+                String token = tokenService.createToken(session);
                 return ResponseEntity.ok().body(token);
             } catch (Exception e) {
                 log.warn("Login exception encrypt " + e.getMessage() + " " + LocalDateTime.now());
