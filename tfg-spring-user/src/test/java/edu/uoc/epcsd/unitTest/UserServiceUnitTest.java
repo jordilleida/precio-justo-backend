@@ -73,14 +73,14 @@ class UserServiceUnitTest {
 
         User user = new User();
 
-        given(userRepository.createUser(user)).willReturn(1L);
+        given(userRepository.createOrEditUser(user)).willReturn(1L);
 
         Long newUserId = userService.createUser(user);
 
         assertThat(newUserId).isNotNull();
 
-        verify(userRepository).createUser(any(User.class));
-        verify(userRepository, times(1)).createUser(user);
+        verify(userRepository).createOrEditUser(any(User.class));
+        verify(userRepository, times(1)).createOrEditUser(user);
     }
     @Test
     @DisplayName("DeleteUser")

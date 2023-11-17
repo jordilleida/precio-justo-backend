@@ -30,7 +30,7 @@ public class UserRepositoryImpl implements UserRepository {
         return userJpaRepository.findByEmail(email).map(UserEntity::toDomain);
     }
     @Override
-    public Long createUser(User user) {
+    public Long createOrEditUser(User user) {
         return userJpaRepository.save(UserEntity.fromDomain(user)).getId();
     }
     @Override

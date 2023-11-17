@@ -38,13 +38,19 @@ public class UserServiceImpl implements UserService {
     @Override
     public Long createUser(User user) {
 
-        Long idCreated =  userRepository.createUser(user);
+        Long idCreated =  userRepository.createOrEditUser(user);
 
         kafkaUserMessagingService.sendMessage(user);
 
         return idCreated;
     }
 
+    @Override
+    public void updateUser(User user) {
+
+        userRepository.createOrEditUser(user);
+
+    }
     @Override
     public void deleteUser(Long id) {
         userRepository.deleteUser(id);

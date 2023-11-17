@@ -15,8 +15,8 @@ public class RoleRepositoryImpl implements RoleRepository {
 
 
     @Override
-    public Optional<Role> findByName(String roleName) {
-        return roleJpaRepository.findByName(roleName).map(RoleEntity::toDomain);
+    public Optional<Role> getSellerRole() {
+        return roleJpaRepository.findById(2L).map(RoleEntity::toDomain);
     }
 
     @Override

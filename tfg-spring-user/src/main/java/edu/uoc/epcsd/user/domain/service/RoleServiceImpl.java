@@ -16,8 +16,8 @@ import java.util.Optional;
 public class RoleServiceImpl implements RoleService{
     private final RoleRepository roleRepository;
     @Override
-    public Role findByName(String roleName){
-        return roleRepository.findByName(roleName)
+    public Role getSellerRole(){
+        return roleRepository.getSellerRole()
                 .orElseThrow(() -> new RuntimeException("Rol por defecto no encontrado"));
     }
     @Override

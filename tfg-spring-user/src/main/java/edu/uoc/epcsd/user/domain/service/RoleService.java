@@ -5,6 +5,6 @@ import edu.uoc.epcsd.user.domain.Role;
 import java.util.Optional;
 
 public interface RoleService {
-    Role findByName(String roleName);
+    Role getSellerRole();
     Role getDefaultRole();
 }

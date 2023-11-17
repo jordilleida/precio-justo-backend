@@ -85,6 +85,35 @@ public class UserRESTController {
 
     	return ResponseEntity.ok().body(userId);
     }
+
+    @PutMapping("/users/{userId}/add-seller")
+    public ResponseEntity<?> addSellerRoleToUser(@PathVariable Long userId) {
+        try {
+            Optional<User> userOptional = userService.findUserById(userId);
+
+            if (userOptional.isEmpty()) {
+                log.info("User not found: " + userId);
+                return ResponseEntity.notFound().build();
+            }
+
+            User user = userOptional.get();
+            Role sellerRole = roleService.getSellerRole();
+
+            if (user.getRoles().contains(sellerRole))
+                                return ResponseEntity.ok().build();
+
+            user.getRoles().add(sellerRole);
+            userService.updateUser(user);
+
+            log.info("SELLER role added to user: " + userId);
+            return ResponseEntity.ok().build();
+
+        } catch (Exception e) {
+            log.error("Error adding SELLER role to user: " + e.getMessage());
+            return ResponseEntity.internalServerError().build();
+        }
+    }
+
     @GetMapping("/users")
     @ResponseStatus(HttpStatus.OK)
     public List<User> findUsers() {
