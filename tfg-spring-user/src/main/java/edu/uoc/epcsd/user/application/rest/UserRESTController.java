@@ -6,6 +6,7 @@ import edu.uoc.epcsd.user.application.request.*;
 import edu.uoc.epcsd.user.domain.*;
 import edu.uoc.epcsd.user.domain.User;
 import edu.uoc.epcsd.user.domain.UserSession;
+import edu.uoc.epcsd.user.domain.service.RoleService;
 import edu.uoc.epcsd.user.domain.service.TokenService;
 import edu.uoc.epcsd.user.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -27,6 +28,7 @@ public class UserRESTController {
 
     private final UserService userService;
     private final TokenService tokenService;
+    private final RoleService roleService;
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
         Optional<User> userOptional = userService.findUserByMail(loginRequest.getMail());
@@ -69,15 +71,17 @@ public class UserRESTController {
         }
 
         //el rol del usuario por defecto es Buyer
+        Role defaultRole = roleService.getDefaultRole();
+
         Set<Role> roles = new HashSet<>();
-                 roles.add(new Role(null, Rol.BUYER));
+                  roles.add(defaultRole);
 
         User user = new User(null, registerRequest.getName(), registerRequest.getSurname(),
                 registerRequest.getMail(), registerRequest.getPassword(), roles, false);
 
-        log.info("createUser " + registerRequest.getMail());
-
         Long userId = userService.createUser(user);
+
+        log.info("createUser " + registerRequest.getMail());
 
     	return ResponseEntity.ok().body(userId);
     }
@@ -86,6 +90,15 @@ public class UserRESTController {
     public List<User> findUsers() {
 
         return userService.findAllUsers();
+    }
+    @GetMapping("/roles/{name}")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<Role> findRoleByName(@PathVariable String name) {
+
+        Role role = roleService.getDefaultRole();
+
+        return ResponseEntity.ok().body(role);
+
     }
 
     @GetMapping("/users/{email}")

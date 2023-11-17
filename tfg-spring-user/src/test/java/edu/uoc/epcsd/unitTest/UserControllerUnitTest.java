@@ -81,7 +81,7 @@ class UserControllerUnitTest {
 	@Test
 	@DisplayName("RegisterUser")
 	public void rest_call_returns_new_userid() throws Exception {
-		Set<Role> roles = new HashSet<>(Collections.singletonList(new Role(null, Rol.BUYER)));
+		Set<Role> roles = new HashSet<>(Collections.singletonList(new Role(null, "BUYER")));
 
 		User user = new User(null, USER_TEST_NAME, "", USER_TEST_EMAIL,
 				USER_TEST_PASSWORD, roles, false);
