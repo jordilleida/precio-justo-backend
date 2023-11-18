@@ -45,9 +45,6 @@ public class UserRESTController {
 
             try {
                 String token = tokenService.createToken(session);
-
-                token = tokenService.solveToken(token).toString();
-
                 return ResponseEntity.ok().body(token);
             } catch (Exception e) {
                 log.warn("Login exception encrypt " + e.getMessage() + " " + LocalDateTime.now());
