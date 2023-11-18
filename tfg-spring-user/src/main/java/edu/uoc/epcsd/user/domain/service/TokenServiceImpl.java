@@ -43,7 +43,7 @@ public class TokenServiceImpl implements TokenService {
                 .withSubject(user.getEmail())
                 .withIssuedAt(now)
                 .withExpiresAt(expiryDate)
-                .withClaim("id", user.getId())
+                .withClaim("userId", user.getId())
                 .withClaim("roles", roles)
                 .sign(algorithm);
     }
