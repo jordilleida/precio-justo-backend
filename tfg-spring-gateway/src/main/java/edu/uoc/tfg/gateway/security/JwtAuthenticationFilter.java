@@ -16,6 +16,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 @Log4j2
 @Component
@@ -23,9 +24,16 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
 
     @Autowired
     private TokenService tokenService;
+    private static final Set<String> EXEMPT_ROUTES = Set.of("/user/login");
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        String path = exchange.getRequest().getPath().toString();
+
+        if (isPublicRoute(path)) {
+            return chain.filter(exchange);
+        }
+
         String token = extractToken(exchange);
 
         if (token == null || !validateToken(token)) {
@@ -33,6 +41,10 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
             return exchange.getResponse().setComplete();
         }
         return chain.filter(exchange);
+    }
+
+    private boolean isPublicRoute(String path){
+        return EXEMPT_ROUTES.contains(path);
     }
 
     private String extractToken(ServerWebExchange exchange) {

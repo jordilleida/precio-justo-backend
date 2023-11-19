@@ -1,5 +1,9 @@
 .idea/
-epcsd-spring-notification-solucio/target/
-epcsd-spring-notification-solucio/logging/
-epcsd-spring-showcatalog-solucio/target/
-epcsd-spring-showcatalog-solucio/logging/
+tfg-spring-notification-solucio/target/
+tfg-spring-notification-solucio/logging/
+tfg-spring-communication/target/
+tfg-spring-communication/logging/
+tfg-spring-user/target/
+tfg-spring-user/logging/
+user.log
+notification.log
