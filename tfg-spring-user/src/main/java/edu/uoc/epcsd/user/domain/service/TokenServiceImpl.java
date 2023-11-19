@@ -76,7 +76,7 @@ public class TokenServiceImpl implements TokenService {
         Long userId = tokenData.getLong("userId");
         String rolesString = tokenData.getString("roles");
         List<SimpleGrantedAuthority> authorities = Arrays.stream(rolesString.split(", "))
-                .map(SimpleGrantedAuthority::new)
+                .map(role -> new SimpleGrantedAuthority("ROLE_" + role.trim().toUpperCase()))
                 .collect(Collectors.toList());
         return new org.springframework.security.core.userdetails.User(email, "", authorities);
     }

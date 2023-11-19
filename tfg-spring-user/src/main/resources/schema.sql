@@ -6,7 +6,7 @@ VALUES  ('Jordi', 'Prueba', 'jordi@uoc.edu', '123', false),
 INSERT INTO roles (name) VALUES ('BUYER'), ('SELLER') , ('ADMIN');
 
 INSERT INTO user_roles (user_id, role_id)
-VALUES  (2, 3), -- Jordi es ADMIN
-        (3, 1), -- Pepe es SELLER
-        (1, 1), -- Empresario es BUYER
-        (1, 2); -- Empresario también es SELLER
+VALUES  (1, 3), -- Jordi es ADMIN
+        (2, 1), -- Pepe es SELLER
+        (3, 1), -- Juan es BUYER
+        (3, 2); -- Juan también es SELLER

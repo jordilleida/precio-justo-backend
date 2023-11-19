@@ -139,7 +139,7 @@ public class UserRESTController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @DeleteMapping("/users/{id}")
     public ResponseEntity<Boolean> deleteUser(@PathVariable Long id) {
         log.info("deleteUser " + id);
