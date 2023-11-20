@@ -20,9 +20,7 @@ import java.io.IOException;
 @Component
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class JwtTokenAuthenticationFilter extends OncePerRequestFilter {
-
     private final TokenService jwtDecoderService;
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         log.info("Accedo a DOFILTERINTERNAL ???");

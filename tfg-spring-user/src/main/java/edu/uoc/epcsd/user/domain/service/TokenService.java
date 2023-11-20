@@ -9,6 +9,6 @@ import java.security.GeneralSecurityException;
 public interface TokenService {
     String createToken(UserSession session);
     JSONObject solveToken(String token);
-
+    String createIdToken(UserSession session);
     UserDetails extractUserDetails(String jwtToken);
 }

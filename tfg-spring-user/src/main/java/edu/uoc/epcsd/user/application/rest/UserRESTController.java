@@ -31,29 +31,37 @@ public class UserRESTController {
     private final TokenService tokenService;
     private final RoleService roleService;
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequest loginRequest) {
         Optional<User> userOptional = userService.findUserByMail(loginRequest.getMail());
 
         if (userOptional.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid email or password.");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
 
         User user = userOptional.get();
-        if (user.getPassword().equals(loginRequest.getPassword())) {
-            UserSession session = new UserSession();
-            session.setUser(user);
-            session.setExpireDate(LocalDateTime.now().plusDays(1));
 
-            try {
-                String token = tokenService.createToken(session);
-                return ResponseEntity.ok().body(token);
-            } catch (Exception e) {
-                log.warn("Login exception encrypt " + e.getMessage() + " " + LocalDateTime.now());
-                return ResponseEntity.internalServerError().build();
-            }
+        if (!user.getPassword().equals(loginRequest.getPassword())) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
 
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password.");
+        UserSession session = new UserSession();
+        session.setUser(user);
+        session.setExpireDate(LocalDateTime.now().plusDays(1));
+
+        try {
+            String accessToken = tokenService.createToken(session);
+            String idToken = tokenService.createIdToken(session);
+
+            Map<String, String> tokens = new HashMap<>();
+            tokens.put("accessToken", accessToken);
+            tokens.put("idToken", idToken);
+
+            return ResponseEntity.ok(tokens);
+
+        } catch (Exception e) {
+            log.warn("Login exception encrypt " + e.getMessage() + " " + LocalDateTime.now());
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @PostMapping("/logout")

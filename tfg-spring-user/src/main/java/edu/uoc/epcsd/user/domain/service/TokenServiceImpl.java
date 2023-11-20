@@ -1,5 +1,6 @@
 package edu.uoc.epcsd.user.domain.service;
 
+import edu.uoc.epcsd.user.domain.Role;
 import edu.uoc.epcsd.user.domain.User;
 import edu.uoc.epcsd.user.domain.UserSession;
 import lombok.extern.log4j.Log4j2;
@@ -15,9 +16,7 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.interfaces.JWTVerifier;
 
 import java.time.ZoneId;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -49,6 +48,19 @@ public class TokenServiceImpl implements TokenService {
                 .withClaim("userId", user.getId())
                 .withClaim("roles", roles)
                 .sign(algorithm);
+    }
+
+    @Override
+    public String createIdToken(UserSession session) {
+        User user = session.getUser();
+        Map<String, Object> idTokenData = new HashMap<>();
+        idTokenData.put("email", user.getEmail());
+        idTokenData.put("roles", user.getRoles().stream()
+                .map(role -> role.getName().name())
+                .collect(Collectors.joining(", ")));
+
+        String json = new JSONObject(idTokenData).toString();
+        return Base64.getUrlEncoder().encodeToString(json.getBytes());
     }
 
     @Override
