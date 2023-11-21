@@ -16,11 +16,11 @@ import java.util.List;
 @Log4j2
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @RestController
-@RequestMapping("/communication")
+@CrossOrigin
 public class CommunicationController {
     private final NotificationService notificationService;
     private final MessageService messageService;
-    @GetMapping
+    @GetMapping("notifications")
     public ResponseEntity<List<Notification>> getAllNotifications() {
         List<Notification> notifications = notificationService.findAllNotifications();
         if (notifications.isEmpty()) {

@@ -2160,3 +2160,1712 @@ Using generated security password: 3a70ead2-0cca-45bd-b834-2af4db2313d0
 2023-11-21 15:55:12.704  INFO 9152 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-11-21 15:55:12.707  INFO 9152 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-11-21 15:55:12.712  INFO 9152 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 15:57:03.366  INFO 14200 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 14200 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 15:57:03.370  INFO 14200 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 15:57:04.745  INFO 14200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 15:57:04.851  INFO 14200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2023-11-21 15:57:06.095  INFO 14200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 15:57:06.109  INFO 14200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 15:57:06.110  INFO 14200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 15:57:06.370  INFO 14200 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 15:57:06.371  INFO 14200 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2603 ms
+2023-11-21 15:57:06.599  INFO 14200 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 15:57:06.676  INFO 14200 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 15:57:06.883  INFO 14200 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 15:57:07.026  INFO 14200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 15:57:07.273  INFO 14200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 15:57:07.308  INFO 14200 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 15:57:08.389  INFO 14200 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 15:57:08.400  INFO 14200 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 15:57:09.079  INFO 14200 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: be782ad2-22df-4522-bb34-f71abfe6e812
+
+2023-11-21 15:57:09.248  INFO 14200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13dc383b, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f9e6167, org.springframework.security.web.header.HeaderWriterFilter@167bb934, org.springframework.security.web.authentication.logout.LogoutFilter@5300694d, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@b5c6a30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32e5fb4c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11a7840f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6885f3f7, org.springframework.security.web.session.SessionManagementFilter@7a85dc58, org.springframework.security.web.access.ExceptionTranslationFilter@36d5c2ce, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c7db0e8]
+2023-11-21 15:57:09.546  WARN 14200 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 15:57:10.717  INFO 14200 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 15:57:10.807  INFO 14200 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 15:57:10.807  INFO 14200 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 15:57:10.807  INFO 14200 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700578630804
+2023-11-21 15:57:11.387  INFO 14200 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 15:57:11.397  INFO 14200 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 15:57:11.397  INFO 14200 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 15:57:11.397  INFO 14200 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 15:57:11.433  INFO 14200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 15:57:11.449  INFO 14200 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 8.641 seconds (JVM running for 9.744)
+2023-11-21 15:57:58.517  INFO 14200 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 15:57:58.518  INFO 14200 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 15:57:58.520  INFO 14200 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-21 15:57:59.013  INFO 14200 --- [http-nio-18084-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 328 ms
+2023-11-21 15:58:37.437  INFO 14200 --- [http-nio-18084-exec-6] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:19092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-11-21 15:58:37.475  INFO 14200 --- [http-nio-18084-exec-6] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 15:58:37.475  INFO 14200 --- [http-nio-18084-exec-6] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 15:58:37.475  INFO 14200 --- [http-nio-18084-exec-6] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700578717475
+2023-11-21 15:58:37.495  INFO 14200 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 5hHOxfIeTTqJmXHyivfT_g
+2023-11-21 15:58:37.519  INFO 14200 --- [http-nio-18084-exec-6] e.u.e.u.i.k.KafkaUserMessagingService    : Sent kafka message to topic users.add for user anthony@gmail.com
+2023-11-21 15:58:37.520  INFO 14200 --- [http-nio-18084-exec-6] e.u.e.u.a.rest.UserRESTController        : createUser anthony@gmail.com
+2023-11-21 16:01:54.166  WARN 14200 --- [http-nio-18084-exec-10] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [145] milliseconds.
+2023-11-21 16:01:54.206  WARN 14200 --- [http-nio-18084-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-11-21 16:02:25.086  INFO 14200 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-11-21 16:02:25.103  INFO 14200 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 16:02:25.103  INFO 14200 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 16:02:25.104  INFO 14200 --- [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 16:02:25.106  INFO 14200 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2023-11-21 16:02:25.111  INFO 14200 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 16:02:25.142  INFO 14200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 16:02:25.159  INFO 14200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 16:06:13.626  INFO 8076 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 8076 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 16:06:13.629  INFO 8076 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 16:06:14.772  INFO 8076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 16:06:14.871  INFO 8076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
+2023-11-21 16:06:16.129  INFO 8076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 16:06:16.143  INFO 8076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 16:06:16.144  INFO 8076 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 16:06:16.331  INFO 8076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 16:06:16.346  INFO 8076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2322 ms
+2023-11-21 16:06:16.639  INFO 8076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 16:06:16.746  INFO 8076 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 16:06:16.978  INFO 8076 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 16:06:17.125  INFO 8076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 16:06:17.432  INFO 8076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 16:06:17.479  INFO 8076 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 16:06:18.752  INFO 8076 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 16:06:18.763  INFO 8076 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 16:06:19.452  INFO 8076 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 80b8ac91-5b41-41be-a987-efb6920ba1ae
+
+2023-11-21 16:06:19.608  INFO 8076 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29d33f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b780b5c, org.springframework.security.web.header.HeaderWriterFilter@63062eea, org.springframework.security.web.authentication.logout.LogoutFilter@2d02a066, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@7e34b127, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@84becbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13dc383b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77e5c765, org.springframework.security.web.session.SessionManagementFilter@424ec990, org.springframework.security.web.access.ExceptionTranslationFilter@39296cef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3713bedc]
+2023-11-21 16:06:19.845  WARN 8076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 16:06:21.149  INFO 8076 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 16:06:21.262  INFO 8076 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 16:06:21.263  INFO 8076 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 16:06:21.263  INFO 8076 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700579181260
+2023-11-21 16:06:21.962  INFO 8076 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 16:06:21.969  INFO 8076 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 16:06:21.969  INFO 8076 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 16:06:21.970  INFO 8076 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 16:06:22.005  INFO 8076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 16:06:22.021  INFO 8076 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 9.0 seconds (JVM running for 10.473)
+2023-11-21 16:14:02.046  INFO 8076 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 16:14:02.099  INFO 8076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 16:14:02.154  INFO 8076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 16:41:09.804  INFO 8272 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 8272 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 16:41:09.807  INFO 8272 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 16:41:11.131  INFO 8272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 16:41:11.245  INFO 8272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 2 JPA repository interfaces.
+2023-11-21 16:41:12.695  INFO 8272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 16:41:12.709  INFO 8272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 16:41:12.710  INFO 8272 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 16:41:12.910  INFO 8272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 16:41:12.911  INFO 8272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2703 ms
+2023-11-21 16:41:13.201  INFO 8272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 16:41:13.295  INFO 8272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 16:41:13.565  INFO 8272 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 16:41:13.729  INFO 8272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 16:41:14.129  INFO 8272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 16:41:14.166  INFO 8272 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 16:41:15.546  INFO 8272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 16:41:15.558  INFO 8272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 16:41:16.322  INFO 8272 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 27f2bf91-eced-475c-8f4f-f90f31bb579e
+
+2023-11-21 16:41:16.501  INFO 8272 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2db6ba81, org.springframework.security.web.context.SecurityContextPersistenceFilter@31cd0efa, org.springframework.security.web.header.HeaderWriterFilter@3c7db0e8, org.springframework.security.web.authentication.logout.LogoutFilter@758ebec4, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@b5c6a30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a69b3cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c460, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10728fe8, org.springframework.security.web.session.SessionManagementFilter@41d53813, org.springframework.security.web.access.ExceptionTranslationFilter@f310675, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@33e6bd36]
+2023-11-21 16:41:16.790  WARN 8272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 16:41:18.227  INFO 8272 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 16:41:18.351  INFO 8272 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 16:41:18.351  INFO 8272 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 16:41:18.351  INFO 8272 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700581278348
+2023-11-21 16:41:19.370  INFO 8272 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 16:41:19.379  INFO 8272 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 16:41:19.379  INFO 8272 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 16:41:19.380  INFO 8272 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 16:41:19.429  INFO 8272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 16:41:19.449  INFO 8272 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 10.34 seconds (JVM running for 12.343)
+2023-11-21 16:42:36.731  INFO 8272 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 16:42:36.737  INFO 8272 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 16:42:36.808  INFO 8272 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 70 ms
+2023-11-21 16:42:37.754  INFO 8272 --- [http-nio-18084-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 511 ms
+2023-11-21 17:38:11.873  WARN 8272 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m57s222ms817µs800ns).
+2023-11-21 17:51:42.011  WARN 8272 --- [http-nio-18084-exec-8] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [129] milliseconds.
+2023-11-21 17:53:54.280  INFO 8272 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 17:53:54.338  INFO 8272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 17:53:54.370  INFO 8272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 18:21:39.418  INFO 15084 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 15084 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 18:21:39.425  INFO 15084 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 18:21:40.964  INFO 15084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 18:21:41.091  INFO 15084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 2 JPA repository interfaces.
+2023-11-21 18:21:42.550  INFO 15084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 18:21:42.564  INFO 15084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 18:21:42.564  INFO 15084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 18:21:42.788  INFO 15084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 18:21:42.789  INFO 15084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2709 ms
+2023-11-21 18:21:43.056  INFO 15084 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 18:21:43.231  INFO 15084 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 18:21:43.531  INFO 15084 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 18:21:43.696  INFO 15084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 18:21:44.245  INFO 15084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 18:21:44.278  INFO 15084 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 18:21:46.357  INFO 15084 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 18:21:46.369  INFO 15084 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 18:21:47.203  INFO 15084 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e52645ec-3454-42ff-98a2-a0464d733aba
+
+2023-11-21 18:21:47.354  INFO 15084 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60ba6631, org.springframework.security.web.context.SecurityContextPersistenceFilter@64e3bc2, org.springframework.security.web.header.HeaderWriterFilter@19355a56, org.springframework.security.web.authentication.logout.LogoutFilter@59e4a044, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@1e8fb66f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4714f447, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c1df0e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d2950ed, org.springframework.security.web.session.SessionManagementFilter@7bad18f5, org.springframework.security.web.access.ExceptionTranslationFilter@89465d9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d4600fb]
+2023-11-21 18:21:47.609  WARN 15084 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 18:21:49.035  INFO 15084 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 18:21:49.136  INFO 15084 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 18:21:49.137  INFO 15084 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 18:21:49.137  INFO 15084 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700587309134
+2023-11-21 18:21:50.394  INFO 15084 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 18:21:50.402  INFO 15084 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 18:21:50.402  INFO 15084 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 18:21:50.403  INFO 15084 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 18:21:50.472  INFO 15084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 18:21:50.489  INFO 15084 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 12.323 seconds (JVM running for 13.756)
+2023-11-21 18:27:40.056  INFO 15084 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 18:27:40.066  INFO 15084 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 18:27:40.162  INFO 15084 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 95 ms
+2023-11-21 18:27:41.032  INFO 15084 --- [http-nio-18084-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 474 ms
+2023-11-21 19:05:18.414  WARN 15084 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m3s394ms327µs600ns).
+2023-11-21 19:15:00.102  INFO 15084 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 19:15:00.165  INFO 15084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 19:15:00.204  INFO 15084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 19:15:18.087  INFO 21276 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 21276 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 19:15:18.093  INFO 21276 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 19:15:19.515  INFO 21276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 19:15:19.607  INFO 21276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2023-11-21 19:15:20.870  INFO 21276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 19:15:20.885  INFO 21276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 19:15:20.885  INFO 21276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 19:15:21.044  INFO 21276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 19:15:21.059  INFO 21276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2542 ms
+2023-11-21 19:15:21.351  INFO 21276 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 19:15:21.429  INFO 21276 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 19:15:21.663  INFO 21276 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 19:15:21.804  INFO 21276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 19:15:22.249  INFO 21276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 19:15:22.284  INFO 21276 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 19:15:24.184  INFO 21276 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 19:15:24.193  INFO 21276 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 19:15:25.043  INFO 21276 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fd455900-76d4-406c-bfa9-b1ce27ab71f9
+
+2023-11-21 19:15:25.199  INFO 21276 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@226e95e9, org.springframework.security.web.context.SecurityContextPersistenceFilter@9f52eb7, org.springframework.security.web.header.HeaderWriterFilter@61607ff0, org.springframework.security.web.authentication.logout.LogoutFilter@7771c4e, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@2287395, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3462e99a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5300694d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27bf574b, org.springframework.security.web.session.SessionManagementFilter@1e4d93f7, org.springframework.security.web.access.ExceptionTranslationFilter@42d7e8bc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4bc41565]
+2023-11-21 19:15:25.485  WARN 21276 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 19:15:27.044  INFO 21276 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 19:15:27.153  INFO 21276 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 19:15:27.153  INFO 21276 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 19:15:27.153  INFO 21276 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700590527153
+2023-11-21 19:15:27.810  INFO 21276 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 19:15:27.823  INFO 21276 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 19:15:27.824  INFO 21276 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 19:15:27.824  INFO 21276 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 19:15:27.846  INFO 21276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 19:15:27.878  INFO 21276 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 10.451 seconds (JVM running for 11.446)
+2023-11-21 19:19:32.238  INFO 21276 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 19:19:32.238  INFO 21276 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 19:19:32.316  INFO 21276 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 78 ms
+2023-11-21 19:19:32.711  INFO 21276 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 19:19:33.191  INFO 21276 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : User->
+2023-11-21 19:20:47.178  INFO 21276 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 19:20:47.194  INFO 21276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 19:20:47.209  INFO 21276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 19:20:57.551  INFO 24160 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 24160 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 19:20:57.551  INFO 24160 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 19:20:58.821  INFO 24160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 19:20:58.931  INFO 24160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces.
+2023-11-21 19:21:00.186  INFO 24160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 19:21:00.201  INFO 24160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 19:21:00.202  INFO 24160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 19:21:00.402  INFO 24160 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 19:21:00.403  INFO 24160 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2452 ms
+2023-11-21 19:21:01.529  INFO 24160 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 19:21:01.633  INFO 24160 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 19:21:01.928  INFO 24160 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 19:21:02.347  INFO 24160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 19:21:02.674  INFO 24160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 19:21:02.710  INFO 24160 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 19:21:04.213  INFO 24160 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 19:21:04.228  INFO 24160 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 19:21:04.924  INFO 24160 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 24c5710c-49b8-4575-9821-1ef7c2575129
+
+2023-11-21 19:21:05.077  INFO 24160 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f7241c2, org.springframework.security.web.context.SecurityContextPersistenceFilter@6a7ea7c, org.springframework.security.web.header.HeaderWriterFilter@54087bdb, org.springframework.security.web.authentication.logout.LogoutFilter@7f9e6167, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@da4cf09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25ee3caa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35d2312f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32245b66, org.springframework.security.web.session.SessionManagementFilter@3bf40c74, org.springframework.security.web.access.ExceptionTranslationFilter@176054b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@89465d9]
+2023-11-21 19:21:05.348  WARN 24160 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 19:21:07.548  INFO 24160 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 19:21:07.671  INFO 24160 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 19:21:07.671  INFO 24160 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 19:21:07.672  INFO 24160 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700590867669
+2023-11-21 19:21:08.254  INFO 24160 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 19:21:08.260  INFO 24160 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 19:21:08.261  INFO 24160 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 19:21:08.261  INFO 24160 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 19:21:08.296  INFO 24160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 19:21:08.310  INFO 24160 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 11.38 seconds (JVM running for 12.502)
+2023-11-21 19:21:28.963  INFO 24160 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 19:21:28.963  INFO 24160 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 19:21:28.963  INFO 24160 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-11-21 19:21:29.131  INFO 24160 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 19:21:29.342  INFO 24160 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 19:21:29.381  INFO 24160 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : Token-> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3JkaUB1b2MuZWR1Iiwicm9sZXMiOiJBRE1JTiIsImV4cCI6MTcwMDY3NzI4OSwiaWF0IjoxNzAwNTkwODg5LCJ1c2VySWQiOjF9.3URG9e3xHulqwsvkYdHUMyf0V2ogH_nFuv2qVTnY0gg
+2023-11-21 19:22:15.169  INFO 24160 --- [http-nio-18084-exec-2] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 19:22:15.184  INFO 24160 --- [http-nio-18084-exec-2] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 19:22:15.185  INFO 24160 --- [http-nio-18084-exec-2] e.u.e.u.a.rest.UserRESTController        : Token-> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3JkaUB1b2MuZWR1Iiwicm9sZXMiOiJBRE1JTiIsImV4cCI6MTcwMDY3NzMzNSwiaWF0IjoxNzAwNTkwOTM1LCJ1c2VySWQiOjF9.mxAHtvcKE_S7TKFrvu1AMfcAMg7w5afC1eyUcMn6Bb8
+2023-11-21 19:38:09.692  INFO 24160 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 19:38:09.876  INFO 24160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 19:38:09.956  INFO 24160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 19:47:01.322  INFO 21044 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 21044 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 19:47:01.326  INFO 21044 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 19:47:02.573  INFO 21044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 19:47:02.680  INFO 21044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces.
+2023-11-21 19:47:04.108  INFO 21044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 19:47:04.122  INFO 21044 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 19:47:04.123  INFO 21044 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 19:47:04.309  INFO 21044 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 19:47:04.310  INFO 21044 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2592 ms
+2023-11-21 19:47:04.602  INFO 21044 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 19:47:04.704  INFO 21044 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 19:47:05.012  INFO 21044 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 19:47:05.230  INFO 21044 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 19:47:05.643  INFO 21044 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 19:47:05.676  INFO 21044 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 19:47:07.125  INFO 21044 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 19:47:07.140  INFO 21044 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 19:47:07.852  INFO 21044 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cb60c4bc-f686-411c-bc2b-d09433dca19e
+
+2023-11-21 19:47:07.996  INFO 21044 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25c4f621, org.springframework.security.web.context.SecurityContextPersistenceFilter@39296cef, org.springframework.security.web.header.HeaderWriterFilter@58e7f930, org.springframework.security.web.authentication.logout.LogoutFilter@5e0bba2f, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@3e214105, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7771c4e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@113a6636, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@619854a3, org.springframework.security.web.session.SessionManagementFilter@232b3b4c, org.springframework.security.web.access.ExceptionTranslationFilter@593354fa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c157abf]
+2023-11-21 19:47:08.277  WARN 21044 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 19:47:09.671  INFO 21044 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 19:47:09.766  INFO 21044 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 19:47:09.766  INFO 21044 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 19:47:09.766  INFO 21044 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700592429766
+2023-11-21 19:47:10.549  INFO 21044 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 19:47:10.554  INFO 21044 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 19:47:10.554  INFO 21044 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 19:47:10.554  INFO 21044 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 19:47:10.601  INFO 21044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 19:47:10.616  INFO 21044 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 9.882 seconds (JVM running for 11.225)
+2023-11-21 19:48:45.781  INFO 21044 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 19:48:45.781  INFO 21044 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 19:48:45.828  INFO 21044 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 47 ms
+2023-11-21 19:48:46.717  INFO 21044 --- [http-nio-18084-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 503 ms
+2023-11-21 19:49:04.567  INFO 21044 --- [http-nio-18084-exec-4] e.u.e.u.a.rest.UserRESTController        : El token se ha creado ?? -> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3JkaUB1b2MuZWR1Iiwicm9sZXMiOiJBRE1JTiIsImV4cCI6MTcwMDY3ODk0NCwiaWF0IjoxNzAwNTkyNTQ0LCJ1c2VySWQiOjF9.KAhQYhxqEhQEl-Aw9f6rtr_IbZedBJGq9YAf-mt56jw
+2023-11-21 19:56:54.150  INFO 21044 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 19:56:54.324  INFO 21044 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 19:56:54.438  INFO 21044 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 20:00:50.013  INFO 16776 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 16776 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 20:00:50.018  INFO 16776 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 20:00:51.530  INFO 16776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 20:00:51.653  INFO 16776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2023-11-21 20:00:52.924  INFO 16776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 20:00:52.940  INFO 16776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 20:00:52.940  INFO 16776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 20:00:53.112  INFO 16776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 20:00:53.112  INFO 16776 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2617 ms
+2023-11-21 20:00:53.363  INFO 16776 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 20:00:53.457  INFO 16776 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 20:00:53.708  INFO 16776 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 20:00:53.865  INFO 16776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 20:00:54.265  INFO 16776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 20:00:54.285  INFO 16776 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 20:00:55.827  INFO 16776 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 20:00:55.837  INFO 16776 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 20:00:56.678  INFO 16776 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3620ab41-cc1b-4bc4-b077-ad68e5edf411
+
+2023-11-21 20:00:56.881  INFO 16776 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3294102e, org.springframework.security.web.context.SecurityContextPersistenceFilter@61607ff0, org.springframework.security.web.header.HeaderWriterFilter@2ee1b017, org.springframework.security.web.authentication.logout.LogoutFilter@14e93c46, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@3bfae028, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b63365c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6839d03b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a69b3cf, org.springframework.security.web.session.SessionManagementFilter@357cdb00, org.springframework.security.web.access.ExceptionTranslationFilter@5aa334c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@52f118aa]
+2023-11-21 20:00:57.222  WARN 16776 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 20:00:59.033  INFO 16776 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 20:00:59.139  INFO 16776 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 20:00:59.139  INFO 16776 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 20:00:59.140  INFO 16776 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700593259136
+2023-11-21 20:00:59.945  INFO 16776 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 20:00:59.951  INFO 16776 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 20:00:59.951  INFO 16776 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 20:00:59.951  INFO 16776 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 20:01:00.011  INFO 16776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 20:01:00.031  INFO 16776 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 11.031 seconds (JVM running for 12.107)
+2023-11-21 20:01:22.611  INFO 16776 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 20:01:22.617  INFO 16776 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 20:01:22.711  INFO 16776 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 93 ms
+2023-11-21 20:01:23.079  INFO 16776 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 20:01:23.406  INFO 16776 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 20:01:33.980  INFO 16776 --- [http-nio-18084-exec-2] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 20:01:33.994  INFO 16776 --- [http-nio-18084-exec-2] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 20:06:02.296  INFO 16776 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 20:06:02.358  INFO 16776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 20:06:02.400  INFO 16776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 20:07:44.388  INFO 3436 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 3436 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 20:07:44.392  INFO 3436 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 20:07:45.532  INFO 3436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 20:07:45.642  INFO 3436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 2 JPA repository interfaces.
+2023-11-21 20:07:46.874  INFO 3436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 20:07:46.890  INFO 3436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 20:07:46.890  INFO 3436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 20:07:47.083  INFO 3436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 20:07:47.083  INFO 3436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2298 ms
+2023-11-21 20:07:47.411  INFO 3436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 20:07:47.504  INFO 3436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 20:07:47.723  INFO 3436 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 20:07:47.864  INFO 3436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 20:07:48.196  INFO 3436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 20:07:48.213  INFO 3436 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 20:07:49.563  INFO 3436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 20:07:49.572  INFO 3436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 20:07:50.334  INFO 3436 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 63cf5960-8bcc-40e7-8a26-730cbe50f8be
+
+2023-11-21 20:07:50.479  INFO 3436 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48188d23, org.springframework.security.web.context.SecurityContextPersistenceFilter@729c8def, org.springframework.security.web.header.HeaderWriterFilter@6d41200c, org.springframework.security.web.authentication.logout.LogoutFilter@5b657342, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@3e214105, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fea095b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@354e2bff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4860627a, org.springframework.security.web.session.SessionManagementFilter@1ff23bd1, org.springframework.security.web.access.ExceptionTranslationFilter@67d8613, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c247363]
+2023-11-21 20:07:50.744  WARN 3436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 20:07:52.227  INFO 3436 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 20:07:52.336  INFO 3436 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 20:07:52.336  INFO 3436 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 20:07:52.336  INFO 3436 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700593672336
+2023-11-21 20:07:53.078  INFO 3436 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 20:07:53.089  INFO 3436 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 20:07:53.089  INFO 3436 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 20:07:53.089  INFO 3436 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 20:07:53.127  INFO 3436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 20:07:53.146  INFO 3436 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 9.448 seconds (JVM running for 10.604)
+2023-11-21 20:28:50.307  INFO 3436 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 20:28:50.395  INFO 3436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 20:28:50.462  INFO 3436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 20:29:04.093  INFO 10436 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 10436 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 20:29:04.095  INFO 10436 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 20:29:05.474  INFO 10436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 20:29:05.583  INFO 10436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2023-11-21 20:29:06.981  INFO 10436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 20:29:07.004  INFO 10436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 20:29:07.004  INFO 10436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 20:29:07.165  INFO 10436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 20:29:07.165  INFO 10436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2702 ms
+2023-11-21 20:29:07.424  INFO 10436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 20:29:07.519  INFO 10436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 20:29:07.776  INFO 10436 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 20:29:08.001  INFO 10436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 20:29:08.444  INFO 10436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 20:29:08.460  INFO 10436 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 20:29:10.188  INFO 10436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 20:29:10.198  INFO 10436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 20:29:11.083  INFO 10436 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f2c5c687-7ef7-404e-905d-1e80d870c169
+
+2023-11-21 20:29:11.261  INFO 10436 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31fc658f, org.springframework.security.web.context.SecurityContextPersistenceFilter@89465d9, org.springframework.security.web.header.HeaderWriterFilter@5300694d, org.springframework.security.web.authentication.logout.LogoutFilter@3c7db0e8, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@7a682d35, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f7241c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32245b66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60d32006, org.springframework.security.web.session.SessionManagementFilter@406808eb, org.springframework.security.web.access.ExceptionTranslationFilter@3d1b43d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64829470]
+2023-11-21 20:29:11.544  WARN 10436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 20:29:13.605  INFO 10436 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 20:29:13.711  INFO 10436 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 20:29:13.711  INFO 10436 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 20:29:13.712  INFO 10436 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700594953708
+2023-11-21 20:29:14.463  INFO 10436 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 20:29:14.480  INFO 10436 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 20:29:14.480  INFO 10436 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 20:29:14.481  INFO 10436 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 20:29:14.547  INFO 10436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 20:29:14.568  INFO 10436 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 11.154 seconds (JVM running for 13.246)
+2023-11-21 20:30:20.452  INFO 10436 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 20:30:20.467  INFO 10436 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 20:30:20.498  INFO 10436 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
+2023-11-21 20:30:20.626  WARN 10436 --- [http-nio-18084-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2023-11-21 20:32:33.963  INFO 10436 --- [http-nio-18084-exec-4] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 20:32:34.491  INFO 10436 --- [http-nio-18084-exec-4] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 20:33:08.806  WARN 10436 --- [http-nio-18084-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [122] milliseconds.
+2023-11-21 20:33:20.665  WARN 10436 --- [http-nio-18084-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-11-21 20:33:26.186  WARN 10436 --- [http-nio-18084-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-11-21 20:33:30.328  INFO 10436 --- [http-nio-18084-exec-9] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 20:33:30.340  INFO 10436 --- [http-nio-18084-exec-9] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 20:34:27.718  WARN 10436 --- [http-nio-18084-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2023-11-21 20:35:34.776  INFO 10436 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 20:35:34.832  INFO 10436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 20:35:34.873  INFO 10436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 20:47:54.463  INFO 7624 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 7624 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 20:47:54.469  INFO 7624 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 20:47:55.617  INFO 7624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 20:47:55.725  INFO 7624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2023-11-21 20:47:56.978  INFO 7624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 20:47:56.994  INFO 7624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 20:47:56.994  INFO 7624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 20:47:57.272  INFO 7624 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 20:47:57.272  INFO 7624 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2406 ms
+2023-11-21 20:47:57.662  INFO 7624 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 20:47:57.787  INFO 7624 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 20:47:58.069  INFO 7624 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 20:47:58.226  INFO 7624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 20:47:58.525  INFO 7624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 20:47:58.556  INFO 7624 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 20:47:59.982  INFO 7624 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 20:47:59.991  INFO 7624 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 20:48:00.757  INFO 7624 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 88d61bd7-4c07-441a-971b-9e2e297da2c9
+
+2023-11-21 20:48:00.898  INFO 7624 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43a8bd35, org.springframework.security.web.context.SecurityContextPersistenceFilter@261f5a45, org.springframework.security.web.header.HeaderWriterFilter@6be1f37f, org.springframework.security.web.authentication.logout.LogoutFilter@3c1df0e9, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@3e214105, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d41200c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@522fb69, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6fb219dd, org.springframework.security.web.session.SessionManagementFilter@67d8613, org.springframework.security.web.access.ExceptionTranslationFilter@a44ad33, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d02a066]
+2023-11-21 20:48:01.132  WARN 7624 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 20:48:02.829  INFO 7624 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 20:48:02.921  INFO 7624 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 20:48:02.921  INFO 7624 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 20:48:02.921  INFO 7624 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700596082921
+2023-11-21 20:48:04.844  INFO 7624 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 20:48:04.855  INFO 7624 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 20:48:04.856  INFO 7624 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 20:48:04.856  INFO 7624 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 20:48:04.893  INFO 7624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 20:48:04.909  INFO 7624 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 11.086 seconds (JVM running for 12.231)
+2023-11-21 20:49:34.012  INFO 7624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 20:49:34.112  INFO 7624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 20:49:34.265  INFO 7624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 20:59:35.470  INFO 18708 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 18708 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 20:59:35.474  INFO 18708 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 20:59:37.126  INFO 18708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 20:59:37.240  INFO 18708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 2 JPA repository interfaces.
+2023-11-21 20:59:38.570  INFO 18708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 20:59:38.584  INFO 18708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 20:59:38.585  INFO 18708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 20:59:38.758  INFO 18708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 20:59:38.759  INFO 18708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2696 ms
+2023-11-21 20:59:39.023  INFO 18708 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 20:59:39.137  INFO 18708 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 20:59:39.373  INFO 18708 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 20:59:39.512  INFO 18708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 20:59:40.022  INFO 18708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 20:59:40.144  INFO 18708 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 20:59:42.760  INFO 18708 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 20:59:42.772  INFO 18708 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 20:59:43.786  INFO 18708 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bc5a7539-5a93-47d8-bf50-d4d43911d6bd
+
+2023-11-21 20:59:43.972  INFO 18708 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41d53813, org.springframework.security.web.context.SecurityContextPersistenceFilter@6839d03b, org.springframework.security.web.header.HeaderWriterFilter@32e5fb4c, org.springframework.security.web.authentication.logout.LogoutFilter@6f7241c2, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@2251b3bc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@703e5614, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@627d5f99, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52f118aa, org.springframework.security.web.session.SessionManagementFilter@58945295, org.springframework.security.web.access.ExceptionTranslationFilter@7a85dc58, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6a013bdd]
+2023-11-21 20:59:44.275  WARN 18708 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 20:59:45.592  INFO 18708 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 20:59:45.700  INFO 18708 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 20:59:45.700  INFO 18708 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 20:59:45.700  INFO 18708 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700596785697
+2023-11-21 20:59:47.255  INFO 18708 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 20:59:47.267  INFO 18708 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 20:59:47.267  INFO 18708 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 20:59:47.267  INFO 18708 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 20:59:47.359  INFO 18708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 20:59:47.378  INFO 18708 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 12.551 seconds (JVM running for 14.543)
+2023-11-21 21:00:22.994  INFO 18708 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 21:00:22.994  INFO 18708 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 21:00:22.997  INFO 18708 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-21 21:00:23.515  INFO 18708 --- [http-nio-18084-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 342 ms
+2023-11-21 21:01:06.586  INFO 18708 --- [http-nio-18084-exec-4] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 21:01:07.160  INFO 18708 --- [http-nio-18084-exec-4] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 21:01:56.277  INFO 18708 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:01:56.293  INFO 18708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 21:01:56.304  INFO 18708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 21:06:05.160  INFO 13348 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 13348 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 21:06:05.164  INFO 13348 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 21:06:06.358  INFO 13348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 21:06:06.469  INFO 13348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
+2023-11-21 21:06:07.772  INFO 13348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 21:06:07.785  INFO 13348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 21:06:07.786  INFO 13348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 21:06:07.939  INFO 13348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 21:06:07.940  INFO 13348 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2356 ms
+2023-11-21 21:06:08.199  INFO 13348 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 21:06:08.296  INFO 13348 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 21:06:08.569  INFO 13348 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 21:06:08.764  INFO 13348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 21:06:09.200  INFO 13348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 21:06:09.254  INFO 13348 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 21:06:12.005  INFO 13348 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 21:06:12.018  INFO 13348 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:06:12.756  INFO 13348 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b71912df-9b94-47e2-a26e-50543b88039c
+
+2023-11-21 21:06:12.918  INFO 13348 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ed87ccf, org.springframework.security.web.context.SecurityContextPersistenceFilter@63062eea, org.springframework.security.web.header.HeaderWriterFilter@6fdd3382, org.springframework.security.web.authentication.logout.LogoutFilter@3294102e, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@b5c6a30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4407fea2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64e3bc2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d4600fb, org.springframework.security.web.session.SessionManagementFilter@7771c4e, org.springframework.security.web.access.ExceptionTranslationFilter@58e7f930, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46ff1aad]
+2023-11-21 21:06:13.164  WARN 13348 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 21:06:14.542  INFO 13348 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 21:06:14.665  INFO 13348 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 21:06:14.666  INFO 13348 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 21:06:14.666  INFO 13348 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700597174659
+2023-11-21 21:06:15.368  INFO 13348 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 21:06:15.376  INFO 13348 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 21:06:15.376  INFO 13348 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 21:06:15.376  INFO 13348 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 21:06:15.422  INFO 13348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 21:06:15.443  INFO 13348 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 11.032 seconds (JVM running for 12.428)
+2023-11-21 21:07:13.448  INFO 13348 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 21:07:13.448  INFO 13348 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 21:07:13.451  INFO 13348 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-21 21:07:13.627  INFO 13348 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 21:07:13.849  INFO 13348 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 21:08:30.010  INFO 13348 --- [http-nio-18084-exec-3] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 21:08:30.023  INFO 13348 --- [http-nio-18084-exec-3] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 21:11:43.105  INFO 13348 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:11:43.148  INFO 13348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 21:11:43.359  INFO 13348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 21:13:52.566  INFO 20952 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 20952 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 21:13:52.571  INFO 20952 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 21:13:53.861  INFO 20952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 21:13:53.960  INFO 20952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
+2023-11-21 21:13:55.388  INFO 20952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 21:13:55.402  INFO 20952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 21:13:55.402  INFO 20952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 21:13:55.625  INFO 20952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 21:13:55.626  INFO 20952 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2619 ms
+2023-11-21 21:13:55.945  INFO 20952 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 21:13:56.088  INFO 20952 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 21:13:56.395  INFO 20952 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 21:13:56.571  INFO 20952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 21:13:56.950  INFO 20952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 21:13:56.987  INFO 20952 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 21:13:59.690  INFO 20952 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 21:13:59.703  INFO 20952 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:14:00.427  INFO 20952 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 19acd3e0-6296-43c1-ac85-7ba795e1ffee
+
+2023-11-21 21:14:00.583  INFO 20952 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d2950ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@54ed249f, org.springframework.security.web.header.HeaderWriterFilter@1ff23bd1, org.springframework.security.web.authentication.logout.LogoutFilter@4be3de36, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@ee8e7ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c1df0e9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b7a4c83, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3095d06b, org.springframework.security.web.session.SessionManagementFilter@4407fea2, org.springframework.security.web.access.ExceptionTranslationFilter@6fdd3382, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7352418c]
+2023-11-21 21:14:00.828  WARN 20952 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 21:14:02.580  INFO 20952 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 21:14:02.674  INFO 20952 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 21:14:02.674  INFO 20952 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 21:14:02.675  INFO 20952 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700597642671
+2023-11-21 21:14:03.533  INFO 20952 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 21:14:03.540  INFO 20952 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 21:14:03.540  INFO 20952 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 21:14:03.541  INFO 20952 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 21:14:03.591  INFO 20952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 21:14:03.606  INFO 20952 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 11.76 seconds (JVM running for 13.023)
+2023-11-21 21:14:36.479  INFO 20952 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:14:36.483  INFO 20952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 21:14:36.488  INFO 20952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 21:14:51.285  INFO 23128 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 23128 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 21:14:51.290  INFO 23128 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 21:14:52.376  INFO 23128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 21:14:52.469  INFO 23128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 2 JPA repository interfaces.
+2023-11-21 21:14:53.715  INFO 23128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 21:14:53.727  INFO 23128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 21:14:53.728  INFO 23128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 21:14:53.969  INFO 23128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 21:14:53.970  INFO 23128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2310 ms
+2023-11-21 21:14:54.245  INFO 23128 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 21:14:54.352  INFO 23128 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 21:14:54.664  INFO 23128 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 21:14:54.883  INFO 23128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 21:14:55.171  INFO 23128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 21:14:55.206  INFO 23128 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 21:14:56.592  INFO 23128 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 21:14:56.605  INFO 23128 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:14:57.512  INFO 23128 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1cfa8628-a781-4364-ae6a-0e8823287fba
+
+2023-11-21 21:14:57.661  INFO 23128 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ed87ccf, org.springframework.security.web.context.SecurityContextPersistenceFilter@63062eea, org.springframework.security.web.header.HeaderWriterFilter@6fdd3382, org.springframework.security.web.authentication.logout.LogoutFilter@3294102e, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@b5c6a30, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4407fea2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64e3bc2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d4600fb, org.springframework.security.web.session.SessionManagementFilter@7771c4e, org.springframework.security.web.access.ExceptionTranslationFilter@58e7f930, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46ff1aad]
+2023-11-21 21:14:57.916  WARN 23128 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 21:14:59.240  INFO 23128 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 21:14:59.334  INFO 23128 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 21:14:59.335  INFO 23128 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 21:14:59.335  INFO 23128 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700597699332
+2023-11-21 21:14:59.853  INFO 23128 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 21:14:59.866  INFO 23128 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 21:14:59.867  INFO 23128 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 21:14:59.867  INFO 23128 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 21:14:59.907  INFO 23128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 21:14:59.924  INFO 23128 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 9.235 seconds (JVM running for 10.229)
+2023-11-21 21:17:38.297  INFO 23128 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 21:17:38.297  INFO 23128 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 21:17:38.299  INFO 23128 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-21 21:17:38.533  INFO 23128 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 21:17:38.725  INFO 23128 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 21:17:44.192  INFO 23128 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:17:44.195  INFO 23128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 21:17:44.203  INFO 23128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 21:20:30.174  INFO 23172 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 23172 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 21:20:30.178  INFO 23172 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 21:20:31.301  INFO 23172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 21:20:31.409  INFO 23172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
+2023-11-21 21:20:32.773  INFO 23172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 21:20:32.786  INFO 23172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 21:20:32.787  INFO 23172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 21:20:32.956  INFO 23172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 21:20:32.956  INFO 23172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2410 ms
+2023-11-21 21:20:33.216  INFO 23172 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 21:20:33.303  INFO 23172 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 21:20:33.577  INFO 23172 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 21:20:33.778  INFO 23172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 21:20:34.170  INFO 23172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 21:20:34.220  INFO 23172 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 21:20:37.454  INFO 23172 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 21:20:37.467  INFO 23172 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:20:38.232  INFO 23172 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5414de18-706a-4843-a79a-0eb232daebcf
+
+2023-11-21 21:20:38.439  INFO 23172 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72c1bf75, org.springframework.security.web.context.SecurityContextPersistenceFilter@5667dd90, org.springframework.security.web.header.HeaderWriterFilter@44e3f3e5, org.springframework.security.web.authentication.logout.LogoutFilter@4714f447, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@38f981b6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76673ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d41200c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43a8bd35, org.springframework.security.web.session.SessionManagementFilter@2570851e, org.springframework.security.web.access.ExceptionTranslationFilter@6839d03b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3922b297]
+2023-11-21 21:20:38.728  WARN 23172 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 21:20:40.070  INFO 23172 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 21:20:40.182  INFO 23172 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 21:20:40.183  INFO 23172 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 21:20:40.183  INFO 23172 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700598040180
+2023-11-21 21:20:40.824  INFO 23172 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 21:20:40.830  INFO 23172 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 21:20:40.830  INFO 23172 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 21:20:40.831  INFO 23172 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 21:20:40.866  INFO 23172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 21:20:40.881  INFO 23172 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 11.446 seconds (JVM running for 13.133)
+2023-11-21 21:21:22.707  INFO 23172 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:21:22.722  INFO 23172 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 21:21:22.727  INFO 23172 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21 21:23:26.948  INFO 13216 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 13216 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-11-21 21:23:26.953  INFO 13216 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-11-21 21:23:28.067  INFO 13216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21 21:23:28.201  INFO 13216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 2 JPA repository interfaces.
+2023-11-21 21:23:29.541  INFO 13216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-11-21 21:23:29.556  INFO 13216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21 21:23:29.559  INFO 13216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-11-21 21:23:29.801  INFO 13216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21 21:23:29.802  INFO 13216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2456 ms
+2023-11-21 21:23:30.111  INFO 13216 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21 21:23:30.237  INFO 13216 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-11-21 21:23:30.503  INFO 13216 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-21 21:23:30.710  INFO 13216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21 21:23:30.989  INFO 13216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21 21:23:31.026  INFO 13216 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-11-21 21:23:32.349  INFO 13216 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21 21:23:32.362  INFO 13216 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:23:33.485  INFO 13216 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7c27338f-1b7c-4d76-bbef-497cc0ba2f4d
+
+2023-11-21 21:23:33.648  INFO 13216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51aaa9d4, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c1df0e9, org.springframework.security.web.header.HeaderWriterFilter@729c8def, org.springframework.security.web.authentication.logout.LogoutFilter@6219006a, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@67332b1e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@768e40af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@165824f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6292c63e, org.springframework.security.web.session.SessionManagementFilter@54ed249f, org.springframework.security.web.access.ExceptionTranslationFilter@32245b66, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d2950ed]
+2023-11-21 21:23:33.871  WARN 13216 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21 21:23:35.057  INFO 13216 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-21 21:23:35.148  INFO 13216 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-11-21 21:23:35.149  INFO 13216 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-11-21 21:23:35.149  INFO 13216 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1700598215146
+2023-11-21 21:23:35.694  INFO 13216 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-21 21:23:35.701  INFO 13216 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-11-21 21:23:35.701  INFO 13216 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-21 21:23:35.701  INFO 13216 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-11-21 21:23:35.732  INFO 13216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-11-21 21:23:35.747  INFO 13216 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 9.46 seconds (JVM running for 10.601)
+2023-11-21 21:23:55.644  INFO 13216 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21 21:23:55.644  INFO 13216 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21 21:23:55.646  INFO 13216 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-21 21:23:55.808  INFO 13216 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 21:23:56.016  INFO 13216 --- [http-nio-18084-exec-1] e.u.e.u.a.rest.UserRESTController        : User-> jordi@uoc.edu
+2023-11-21 21:23:59.045  INFO 13216 --- [http-nio-18084-exec-2] e.u.e.u.a.rest.UserRESTController        : ACCEDO A LOGIN
+2023-11-21 21:24:16.860  INFO 13216 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21 21:24:16.864  INFO 13216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21 21:24:16.868  INFO 13216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
