@@ -2,12 +2,13 @@ package edu.uoc.epcsd.user.domain.service;
 
 import edu.uoc.epcsd.user.domain.User;
 import edu.uoc.epcsd.user.domain.repository.UserRepository;
-import edu.uoc.epcsd.user.infrastructure.kafka.KafkaConstants;
 import edu.uoc.epcsd.user.infrastructure.kafka.KafkaUserMessagingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,6 +41,8 @@ public class UserServiceImpl implements UserService {
 
         Long idCreated =  userRepository.createOrEditUser(user);
 
+        user.setId(idCreated);
+
         kafkaUserMessagingService.sendMessage(user);
 
         return idCreated;
@@ -50,6 +53,14 @@ public class UserServiceImpl implements UserService {
 
         userRepository.createOrEditUser(user);
 
+    }
+    @Override
+    public Optional<UserDetails> getAuthenticatedUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
+            return Optional.of((UserDetails) authentication.getPrincipal());
+        }
+        return Optional.empty();
     }
     @Override
     public void deleteUser(Long id) {

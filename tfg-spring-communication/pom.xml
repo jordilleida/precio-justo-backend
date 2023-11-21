@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>edu.uoc.epcsd</groupId>
-    <artifactId>notification</artifactId>
+    <artifactId>communication</artifactId>
     <version>0.0.1-${versionExtra}</version>
-    <name>notification</name>
+    <name>communication</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
@@ -89,7 +89,7 @@
             <properties>
                 <versionExtra>release</versionExtra>
                 <kafkaHost>relayserver:19092</kafkaHost>
-                <catalogHost>showcatalog:18081</catalogHost>
+                <catalogHost>communication:18081</catalogHost>
             </properties>
         </profile>
     </profiles>
@@ -101,7 +101,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>notification:latest</name>
+                        <name>communication:latest</name>
                     </image>
                     <excludes>
                         <exclude>

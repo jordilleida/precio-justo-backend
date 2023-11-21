@@ -30,8 +30,10 @@ public class UserRESTController {
     private final UserService userService;
     private final TokenService tokenService;
     private final RoleService roleService;
+
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequest loginRequest) {
+
         Optional<User> userOptional = userService.findUserByMail(loginRequest.getMail());
 
         if (userOptional.isEmpty()) {
@@ -96,6 +98,7 @@ public class UserRESTController {
     }
 
     @PutMapping("/users/{userId}/add-seller")
+    @PreAuthorize("hasRole('ROLE_BUYER')")
     public ResponseEntity<?> addSellerRoleToUser(@PathVariable Long userId) {
         try {
             Optional<User> userOptional = userService.findUserById(userId);

@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import edu.uoc.epcsd.notification.domain.User;
-import edu.uoc.epcsd.notification.domain.service.NotificationServiceImpl;
+import edu.uoc.epcsd.communication.domain.User;
+import edu.uoc.epcsd.communication.domain.service.NotificationServiceImpl;
 
 @SpringBootTest
 class NotificationServiceTests {

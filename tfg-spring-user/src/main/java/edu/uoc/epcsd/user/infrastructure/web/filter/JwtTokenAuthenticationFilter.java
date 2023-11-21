@@ -20,20 +20,17 @@ import java.io.IOException;
 @Component
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class JwtTokenAuthenticationFilter extends OncePerRequestFilter {
-    private final TokenService jwtDecoderService;
+    private final TokenService tokenService;
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        log.info("Accedo a DOFILTERINTERNAL ???");
 
         String token = request.getHeader("Authorization");
-        log.info("TOKEN ??? {}", token);
 
         if (token != null && token.startsWith("Bearer ")) {
             String jwtToken = token.substring(7);
-            UserDetails userDetails = jwtDecoderService.extractUserDetails(jwtToken);
+            UserDetails userDetails = tokenService.extractUserDetails(jwtToken);
             UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
                     userDetails, null, userDetails.getAuthorities());
-            log.info("Accedo a filtro {}", userDetails.getAuthorities().toString());
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }

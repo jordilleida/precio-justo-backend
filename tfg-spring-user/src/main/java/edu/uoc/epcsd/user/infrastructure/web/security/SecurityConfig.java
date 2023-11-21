@@ -1,6 +1,8 @@
 package edu.uoc.epcsd.user.infrastructure.web.security;
 
 import edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.json.HTTP;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,15 +16,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Log4j2
 @EnableWebSecurity
+@AllArgsConstructor
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
-
     @Autowired
     private JwtTokenAuthenticationFilter jwtTokenAuthenticationFilter;
-
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        log.info("LLEGO A FILTER HTTP", http.toString());
        http.authorizeRequests(authorizeRequests -> authorizeRequests.anyRequest()
                 .permitAll())
                .csrf(AbstractHttpConfigurer::disable)
