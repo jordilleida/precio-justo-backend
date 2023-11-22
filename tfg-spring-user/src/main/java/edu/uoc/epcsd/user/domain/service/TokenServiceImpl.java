@@ -55,6 +55,7 @@ public class TokenServiceImpl implements TokenService {
         User user = session.getUser();
         Map<String, Object> idTokenData = new HashMap<>();
         idTokenData.put("email", user.getEmail());
+        idTokenData.put("name", user.getName());
         idTokenData.put("roles", user.getRoles().stream()
                 .map(role -> role.getName().name())
                 .collect(Collectors.joining(", ")));

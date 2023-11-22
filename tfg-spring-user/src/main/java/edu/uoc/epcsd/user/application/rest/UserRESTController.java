@@ -9,7 +9,6 @@ import edu.uoc.epcsd.user.domain.UserSession;
 import edu.uoc.epcsd.user.domain.service.RoleService;
 import edu.uoc.epcsd.user.domain.service.TokenService;
 import edu.uoc.epcsd.user.domain.service.UserService;
-import edu.uoc.epcsd.user.infrastructure.kafka.KafkaUserMessagingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -31,8 +30,6 @@ public class UserRESTController {
     private final UserService userService;
     private final TokenService tokenService;
     private final RoleService roleService;
-
-    private final KafkaUserMessagingService kafkaUserMessagingService;
 
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequest loginRequest) {
@@ -76,7 +73,7 @@ public class UserRESTController {
         return ResponseEntity.ok().build();
     }
     @PostMapping("/register")
-    public ResponseEntity<Long> Register(@Valid @RequestBody RegisterRequest registerRequest) {
+    public ResponseEntity<User> Register(@Valid @RequestBody RegisterRequest registerRequest) {
 
         Optional<User> existingUser = userService.findUserByMail(registerRequest.getMail());
 
@@ -93,23 +90,21 @@ public class UserRESTController {
         User userRequest = new User(null, registerRequest.getName(), registerRequest.getSurname(),
                 registerRequest.getMail(), registerRequest.getPassword(), roles, false);
 
-        User newUser = userService.createUser(userRequest);
+        Long userId = userService.createUser(userRequest);
 
-        kafkaUserMessagingService.sendMessage(newUser);
+        log.info("createUser " + userId);
 
-        log.info("createUser " + registerRequest.getMail());
-
-    	return ResponseEntity.ok().body(newUser.getId());
+    	return ResponseEntity.ok().body(userRequest);
     }
 
-    @PutMapping("/users/{userId}/add-seller")
+    @PutMapping("/users/{email}/add-seller")
     @PreAuthorize("hasRole('ROLE_BUYER')")
-    public ResponseEntity<?> addSellerRoleToUser(@PathVariable Long userId) {
+    public ResponseEntity<?> addSellerRoleToUser(@PathVariable String email) {
         try {
-            Optional<User> userOptional = userService.findUserById(userId);
+            Optional<User> userOptional = userService.findUserByMail(email);
 
             if (userOptional.isEmpty()) {
-                log.info("User not found: " + userId);
+                log.info("User not found: " + email);
                 return ResponseEntity.notFound().build();
             }
 
@@ -122,7 +117,7 @@ public class UserRESTController {
             user.getRoles().add(sellerRole);
             userService.updateUser(user);
 
-            log.info("SELLER role added to user: " + userId);
+            log.info("SELLER role added to user: " + user.getId());
             return ResponseEntity.ok().build();
 
         } catch (Exception e) {

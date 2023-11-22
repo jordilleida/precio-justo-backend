@@ -3,6 +3,7 @@ package edu.uoc.epcsd.user.infrastructure.repository.jpa;
 import edu.uoc.epcsd.user.domain.User;
 import edu.uoc.epcsd.user.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.data.domain.Example;
@@ -12,6 +13,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
+@Log4j2
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class UserRepositoryImpl implements UserRepository {
 
