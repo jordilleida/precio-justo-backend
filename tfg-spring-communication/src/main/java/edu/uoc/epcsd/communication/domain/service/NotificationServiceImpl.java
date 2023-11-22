@@ -31,15 +31,16 @@ public class NotificationServiceImpl implements NotificationService {
         // Envío de correo electrónico
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(user.getEmail());
-        message.setSubject("Registro Confirmado");
-        message.setText("PRECIO JUSTO. Gracias por registrarte en nuestra plataforma.");
+        message.setSubject("PRECIO JUSTO - Registro Confirmado");
+        message.setText("Gracias por registrarte en nuestra plataforma.");
         mailSender.send(message);
 
         // Guardar en la base de datos
         Notification notification = new Notification();
-        notification.setContent("Usuario registrado con éxito");
+        notification.setContent("Usuario registrado con éxito: " + user.getEmail() );
         notification.setSendDate(LocalDateTime.now());
         notification.setStatus(MessageStatus.SENT);
+        notification.setUserId(user.getId());
         notificationRepository.save(notification);
 
         return true;

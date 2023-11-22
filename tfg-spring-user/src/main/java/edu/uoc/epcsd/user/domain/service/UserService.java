@@ -14,7 +14,7 @@ public interface UserService {
     
     Optional<User> findUserByMail(String email);
 
-    Long createUser(User user);
+    User createUser(User user);
     Optional<UserDetails> getAuthenticatedUser();
     void updateUser(User user);
     void deleteUser(Long id);

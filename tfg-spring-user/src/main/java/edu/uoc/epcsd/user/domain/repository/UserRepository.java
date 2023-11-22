@@ -13,7 +13,7 @@ public interface UserRepository {
    
     Optional<User> findUserByMail(String email);
 
-    Long createOrEditUser(User user);
+    User createOrEditUser(User user);
 
     void deleteUser(Long id);
 }

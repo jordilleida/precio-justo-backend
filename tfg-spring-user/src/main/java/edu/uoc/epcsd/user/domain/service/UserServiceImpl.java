@@ -2,7 +2,6 @@ package edu.uoc.epcsd.user.domain.service;
 
 import edu.uoc.epcsd.user.domain.User;
 import edu.uoc.epcsd.user.domain.repository.UserRepository;
-import edu.uoc.epcsd.user.infrastructure.kafka.KafkaUserMessagingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,6 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
-    private final KafkaUserMessagingService kafkaUserMessagingService;
     @Override
     public List<User> findAllUsers() {
         return userRepository.findAllUsers();
@@ -37,15 +35,10 @@ public class UserServiceImpl implements UserService {
         return userRepository.findUserByMail(email);
     }
     @Override
-    public Long createUser(User user) {
+    public User createUser(User user) {
 
-        Long idCreated =  userRepository.createOrEditUser(user);
+        return userRepository.createOrEditUser(user);
 
-        user.setId(idCreated);
-
-        kafkaUserMessagingService.sendMessage(user);
-
-        return idCreated;
     }
 
     @Override
