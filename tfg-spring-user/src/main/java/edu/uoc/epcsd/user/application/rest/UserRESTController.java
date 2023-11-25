@@ -52,11 +52,9 @@ public class UserRESTController {
 
         try {
             String accessToken = tokenService.createToken(session);
-            String idToken = tokenService.createIdToken(session);
 
             Map<String, String> tokens = new HashMap<>();
             tokens.put("accessToken", accessToken);
-            tokens.put("idToken", idToken);
 
             return ResponseEntity.ok(tokens);
 
@@ -126,6 +124,7 @@ public class UserRESTController {
         }
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/users")
     @ResponseStatus(HttpStatus.OK)
     public List<User> findUsers() {

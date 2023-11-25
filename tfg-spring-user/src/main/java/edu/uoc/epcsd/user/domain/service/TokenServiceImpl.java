@@ -46,24 +46,10 @@ public class TokenServiceImpl implements TokenService {
                 .withIssuedAt(now)
                 .withExpiresAt(Date.from(expiryDate.toInstant()))
                 .withClaim("userId", user.getId())
+                .withClaim("name", user.getName())
                 .withClaim("roles", roles)
                 .sign(algorithm);
     }
-
-    @Override
-    public String createIdToken(UserSession session) {
-        User user = session.getUser();
-        Map<String, Object> idTokenData = new HashMap<>();
-        idTokenData.put("email", user.getEmail());
-        idTokenData.put("name", user.getName());
-        idTokenData.put("roles", user.getRoles().stream()
-                .map(role -> role.getName().name())
-                .collect(Collectors.joining(", ")));
-
-        String json = new JSONObject(idTokenData).toString();
-        return Base64.getUrlEncoder().encodeToString(json.getBytes());
-    }
-
     @Override
     public JSONObject solveToken(String token) {
         JWTVerifier verifier = JWT.require(algorithm).build();
