@@ -70,15 +70,22 @@ class UserServiceUnitTest {
     @Test
     @DisplayName("CreateUser")
     void CreateUser() {
-
+        // Creo una instancia de User para la prueba
         User user = new User();
 
-        given(userRepository.createOrEditUser(user)).willReturn(1L);
+        // Creo un usuario mock con el ID esperado
+        User mockUser = new User();
+        mockUser.setId(1L);
+
+        given(userRepository.createOrEditUser(any(User.class))).willReturn(mockUser);
 
         Long newUserId = userService.createUser(user);
 
+        // Valido que el ID del usuario retornado es 1L
         assertThat(newUserId).isNotNull();
+        assertThat(newUserId).isEqualTo(1L);
 
+        // Verifico las interacciones con el mock
         verify(userRepository).createOrEditUser(any(User.class));
         verify(userRepository, times(1)).createOrEditUser(user);
     }

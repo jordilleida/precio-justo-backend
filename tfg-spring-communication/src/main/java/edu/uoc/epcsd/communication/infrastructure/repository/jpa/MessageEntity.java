@@ -28,6 +28,7 @@ public class MessageEntity implements DomainTranslatable<Message>{
     private String content;
 
     @Column(name = "send_date")
+    @Builder.Default
     private LocalDateTime sendDate = LocalDateTime.now();
 
     @Column(name = "reply_to_message_id")
