@@ -41,6 +41,7 @@ public class RegionEntity implements DomainTranslatable<Region> {
         return RegionEntity.builder()
                 .id(region.getId())
                 .name(region.getName())
+                .country(CountryEntity.fromDomain(region.getCountry()))
                 .build();
     }
 }

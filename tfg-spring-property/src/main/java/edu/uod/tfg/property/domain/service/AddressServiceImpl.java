@@ -23,34 +23,23 @@ public class AddressServiceImpl implements AddressService{
     public PostalCode addPostalCode(PostalCode postalCode) { return addressRepository.addPostalCode(postalCode); }
     @Override
     public Region addRegion(Region region) { return addressRepository.addRegion(region); }
+
     @Override
-    public Property saveCompleteAddress(Property property) {
+    public PostalCode saveCompleteAddress(String countryName, String regionName, String cityName, String postalCode) {
+        // Crear o verificar el país
+        Country country = addCountry(new Country(null, countryName));
 
-        PostalCode postalCode = property.getPostalCode();
-        City city = postalCode.getCity();
-        Region region = city.getRegion();
-        Country country = region.getCountry();
+        // Crear o verificar la región
+        Region region = addRegion(new Region(null, regionName, country));
 
-        // Guardar o verificar el país
-        country = addCountry(country); //Con la id
+        // Crear o verificar la ciudad
+        City city = addCity(new City(null, cityName, region));
 
-        // Guardar o verificar la región
+        // Crear o verificar el código postal
+        PostalCode postalCodeCreated = addPostalCode(new PostalCode(null, postalCode, city));
 
-        region.setCountry(country);
-        region = addRegion(region); //Con la id
 
-        // Guardar o verificar la ciudad
-        city.setRegion(region);
-        city = addCity(city); //Con la id
-
-        // Guardar o verificar el código postal
-        postalCode.setCity(city);
-        postalCode = addPostalCode(postalCode); //Con el identificador insertado
-
-        // Establecemos el id del código postal guardado en la propiedad para ver si ha ido bien
-        property.setPostalCode(postalCode);
-
-        return property;
+        return postalCodeCreated;
     }
 
     @Override

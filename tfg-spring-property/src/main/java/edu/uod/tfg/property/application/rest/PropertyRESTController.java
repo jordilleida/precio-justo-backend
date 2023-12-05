@@ -4,10 +4,13 @@ package edu.uod.tfg.property.application.rest;
 import edu.uod.tfg.property.application.mapper.PropertyMapper;
 import edu.uod.tfg.property.application.request.NewPropertyRequest;
 import edu.uod.tfg.property.domain.model.OwnerHistory;
+import edu.uod.tfg.property.domain.model.PostalCode;
 import edu.uod.tfg.property.domain.model.Property;
 import edu.uod.tfg.property.domain.model.PropertyStatus;
 import edu.uod.tfg.property.domain.service.AddressService;
 import edu.uod.tfg.property.domain.service.PropertyService;
+import edu.uod.tfg.property.infrastructure.security.CustomUserDetails;
+import edu.uod.tfg.property.infrastructure.security.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +37,7 @@ public class PropertyRESTController {
 
     private final PropertyService propertyService;
     private final AddressService addressService;
+    private final UserService userService;
 
     @GetMapping("/properties")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
@@ -104,29 +108,49 @@ public class PropertyRESTController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<String> createProperty(@Valid @RequestBody NewPropertyRequest newPropertyRequest,
-                                                 @RequestParam("images") List<MultipartFile> images) {
+    public ResponseEntity<String> createProperty(@Valid @RequestBody NewPropertyRequest newPropertyRequest) {
+
+        // De momento no envio imagenes para probar el objeto en si
+        // , @RequestParam("images") List<MultipartFile> images
+
+        Optional<CustomUserDetails> userDetails = userService.getAuthenticatedUser();
+        if (!userDetails.isPresent()) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuario no autenticado.");
+        }
+
+        Long userId = userDetails.get().getUserId();
+        String email = userDetails.get().getUsername();
+
         Optional<Property> existingProperty = propertyService.findPropertyByCatastralReference(newPropertyRequest.getCatastralReference());
 
         if (existingProperty.isPresent()) {
+
             PropertyStatus status = existingProperty.get().getStatus();
+
             if (!(status == PropertyStatus.SOLD || status == PropertyStatus.DELETED)) {
-                // Envía email al propietario actual si es necesario
+                // Utiliza el email extraído para enviar un email al propietario actual si es necesario
                 // Lógica para enviar email y generar respuesta adecuada
-                String responseMessage = "Email enviado al propietario actual para confirmar el cambio de estado.";
+                String responseMessage = "La propiedad no se puede agregar por estar actualmente activa," +
+                                         "se ha enviado email al propietario actual, si la da de baja podrá insertarla.";
+
                 return ResponseEntity.unprocessableEntity().body(responseMessage);
             }
         }
 
-        // Convertir NewPropertyRequest a Property
+        // Convertir NewPropertyRequest a Property y establecer userId y email
         Property newProperty = PropertyMapper.convertToProperty(newPropertyRequest);
-        // Añadir email a property desde el token (asegúrate de que este paso se haga correctamente)
-        // ...
+        newProperty.setUserId(userId);
+        newProperty.setContact(email);
 
         // Crear la dirección de la propiedad
-        addressService.saveCompleteAddress(newProperty);
+        PostalCode completeAddress = addressService.saveCompleteAddress(newPropertyRequest.getCountry(),
+                                                                          newPropertyRequest.getRegion(),
+                                                                            newPropertyRequest.getCity(),
+                                                                              newPropertyRequest.getPostalCode());
 
-        // Crear la propiedad a través del PropertyService
+       newProperty.setPostalCode(completeAddress);
+
+        // Creo la propiedad a través del PropertyService
         Property createdProperty = propertyService.createProperty(newProperty);
 
         String responseMessage;
@@ -140,5 +164,7 @@ public class PropertyRESTController {
 
         return ResponseEntity.ok(responseMessage);
     }
+
+
 
 }

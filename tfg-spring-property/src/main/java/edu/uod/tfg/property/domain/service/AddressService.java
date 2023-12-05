@@ -10,7 +10,7 @@ public interface AddressService {
     PostalCode addPostalCode(PostalCode postalCode);
     Region addRegion(Region region);
 
-    Property saveCompleteAddress(Property property);
+    PostalCode saveCompleteAddress(String countryName, String regionName, String cityName, String postalCode);
     Optional<Country> getCountry(String name);
     Optional<City> getCity(String name);
     Optional<Region> getRegion(String name);

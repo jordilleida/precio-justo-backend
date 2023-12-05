@@ -40,6 +40,7 @@ public class CityEntity implements DomainTranslatable<City> {
         return CityEntity.builder()
                 .id(city.getId())
                 .name(city.getName())
+                .region(RegionEntity.fromDomain(city.getRegion()))
                 .build();
     }
 }

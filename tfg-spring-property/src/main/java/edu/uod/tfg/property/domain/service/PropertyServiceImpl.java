@@ -20,23 +20,35 @@ public class PropertyServiceImpl implements PropertyService {
     private final PropertyRepository propertyRepository;
     @Override
     public Property createProperty(Property property) {
+
+        Optional<Property> existingProperty = findPropertyByCatastralReference(property.getCatastralReference());
+
+        if (existingProperty.isPresent()) {
+            //Significa que la propiedad ya existe anteriormente
+             Long existingPropertyId = existingProperty.get().getId();
+             Long existingPropertyUserId = existingProperty.get().getUserId();
+
+             cancelOwner(existingPropertyId, existingPropertyUserId);
+        }
+
         property.setStatus(PropertyStatus.PENDING_VALIDATION);
 
         return propertyRepository.editOrCreateProperty(property);
     }
     @Override
     public Property validateProperty(Long propertyId) {
-                //Encontrar propietario actual, ultimo registro historyOwner y poner endDate
-                //Nueva row de historyOwner con el nuevo propietario que figura en la propiedad
+        Optional<Property> property = findPropertyById(propertyId);
+
+                 Long propetyUserId = property.get().getUserId();
+
+               //Nueva row de historyOwner con el nuevo propietario que figura en la propiedad
+               registerOwner(propertyId, propetyUserId);
 
         return changePropertyStatus(propertyId, PropertyStatus.VALIDATED);
     }
 
     @Override
     public Property invalidateProperty(Long propertyId) {
-                //Volver al status Validated,
-                //Poner id del actual historyOwner
-
         return changePropertyStatus(propertyId, PropertyStatus.DELETED);
     }
 

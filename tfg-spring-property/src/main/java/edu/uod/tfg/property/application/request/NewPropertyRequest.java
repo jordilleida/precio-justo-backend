@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import edu.uod.tfg.property.domain.model.PropertyType;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -13,7 +14,7 @@ public class NewPropertyRequest {
 
     @Getter
     @NotNull
-    private final PropertyType type;
+    private final String type;
 
     @Getter
     @NotNull
@@ -46,16 +47,12 @@ public class NewPropertyRequest {
     @Getter
     @NotNull
     private final Double longitude;
-
-    @Getter
-    @NotNull
-    private final Long userId;
-
     @Getter
     @NotNull
     private final String address;
 
     @Getter
+    @Setter
     private final List<String> imageUrls;
 
     @Getter
@@ -85,7 +82,6 @@ public class NewPropertyRequest {
             @JsonProperty("catastralReference") @NotNull final String catastralReference,
             @JsonProperty("latitude") @NotNull final Double latitude,
             @JsonProperty("longitude") @NotNull final Double longitude,
-            @JsonProperty("userId") @NotNull final Long userId,
             @JsonProperty("address") @NotNull final String address,
             @JsonProperty("imageUrls") final List<String> imageUrls,
             @JsonProperty("postalCode") @NotNull final String postalCode,
@@ -93,7 +89,7 @@ public class NewPropertyRequest {
             @JsonProperty("region") @NotNull final String region,
             @JsonProperty("country") @NotNull final String country) {
 
-        this.type = PropertyType.valueOf(type);
+        this.type = type;
         this.description = description;
         this.rooms = rooms;
         this.baths = baths;
@@ -102,7 +98,6 @@ public class NewPropertyRequest {
         this.catastralReference = catastralReference;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.userId = userId;
         this.address = address;
         this.imageUrls = imageUrls;
         this.postalCode = postalCode;

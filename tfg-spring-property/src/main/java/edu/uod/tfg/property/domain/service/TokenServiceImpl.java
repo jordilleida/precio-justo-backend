@@ -4,6 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.interfaces.JWTVerifier;
+import edu.uod.tfg.property.infrastructure.security.CustomUserDetails;
 import lombok.extern.log4j.Log4j2;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
@@ -52,6 +53,7 @@ public class TokenServiceImpl implements TokenService {
         List<SimpleGrantedAuthority> authorities = Arrays.stream(rolesString.split(", "))
                 .map(role -> new SimpleGrantedAuthority("ROLE_" + role.trim().toUpperCase()))
                 .collect(Collectors.toList());
-        return new org.springframework.security.core.userdetails.User(email, "", authorities);
+
+        return new CustomUserDetails(email, "", authorities, userId);
     }
 }

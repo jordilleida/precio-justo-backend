@@ -73,12 +73,15 @@ public class AddressRepositoryImpl implements AddressRepository {
     @Override
     public Region addRegion(Region region) {
 
-
         Optional<RegionEntity> existingRegion = regionJpaRepository.findByName(region.getName());
+
+
         if (existingRegion.isPresent()) {
+
 
             return existingRegion.get().toDomain();
         } else {
+
             CountryEntity countryEntity = countryJpaRepository.findByName(region.getCountry().getName())
                     .orElseGet(() -> countryJpaRepository.save(CountryEntity.fromDomain(new Country(null, region.getCountry().getName()))));
 
