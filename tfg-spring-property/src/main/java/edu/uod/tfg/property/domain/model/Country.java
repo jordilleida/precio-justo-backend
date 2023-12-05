@@ -2,10 +2,7 @@ package edu.uod.tfg.property.domain.model;
 
 import lombok.*;
 
-@ToString
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

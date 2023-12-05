@@ -2,10 +2,7 @@ package edu.uod.tfg.property.domain.model;
 
 import lombok.*;
 
-@ToString
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,5 +11,5 @@ public class Region {
 
     private String name;
 
-    private String country;
+    private Country country;
 }

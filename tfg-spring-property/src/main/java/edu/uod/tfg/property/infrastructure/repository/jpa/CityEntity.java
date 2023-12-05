@@ -33,7 +33,7 @@ public class CityEntity implements DomainTranslatable<City> {
         return City.builder()
                 .id(this.id)
                 .name(this.name)
-                .region(this.region.toDomain().getName())
+                .region(this.region.toDomain())
                 .build();
     }
     public static CityEntity fromDomain(City city) {

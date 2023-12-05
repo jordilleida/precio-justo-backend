@@ -23,6 +23,7 @@ public class Property {
     private Double latitude;
     private Double longitude;
     private Long userId;
+    private String contact;
     private String address;
     private List<PropertyImage> images;
 

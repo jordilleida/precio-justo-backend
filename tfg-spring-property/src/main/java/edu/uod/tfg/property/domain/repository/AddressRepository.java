@@ -8,10 +8,10 @@ import edu.uod.tfg.property.domain.model.Region;
 import java.util.Optional;
 
 public interface AddressRepository {
-    Long addCountry(Country country);
-    Long addCity(City city);
-    Long addPostalCode(PostalCode postalCode);
-    Long addRegion(Region region);
+    Country addCountry(Country country);
+    City addCity(City city);
+    PostalCode addPostalCode(PostalCode postalCode);
+    Region addRegion(Region region);
 
     Optional<Country> getCountry(String name);
     Optional<City> getCity(String name);

@@ -14,6 +14,6 @@ public class PostalCode {
 
     private String code;
 
-    private String city;
+    private City city;
 }
 

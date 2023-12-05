@@ -24,7 +24,7 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
 
     @Autowired
     private TokenService tokenService;
-    private static final Set<String> EXEMPT_ROUTES = Set.of("/user/login","/user/register");
+    private static final Set<String> EXEMPT_ROUTES = Set.of("/user/login","/user/register","/property/auction");
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {

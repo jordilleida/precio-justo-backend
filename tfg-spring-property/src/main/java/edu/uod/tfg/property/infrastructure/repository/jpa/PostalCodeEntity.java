@@ -31,7 +31,7 @@ public class PostalCodeEntity implements DomainTranslatable<PostalCode> {
         return PostalCode.builder()
                 .id(this.id)
                 .code(this.code)
-                .city(this.city.toDomain().getName())
+                .city(this.city.toDomain())
                 .build();
     }
     public static PostalCodeEntity fromDomain(PostalCode postalCode) {

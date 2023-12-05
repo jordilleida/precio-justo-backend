@@ -33,10 +33,16 @@ public class PropertyEntity implements DomainTranslatable<Property>  {
     private String status;
     @Column(name = "registry_document_url")
     private String registryDocumentUrl;
-    @Column(name = "catastral_reference")
+
     @NotNull
+    @Column(name = "catastral_reference", unique = true, nullable = false)
     private String catastralReference;
+
+    @Column(name = "user_id")
+    @NotNull
     private Long userId;
+
+    private String contact;
     private String address;
 
     @Column(name = "latitude")
@@ -68,6 +74,7 @@ public class PropertyEntity implements DomainTranslatable<Property>  {
                 .registryDocumentUrl(this.registryDocumentUrl)
                 .catastralReference(this.catastralReference)
                 .userId(this.userId)
+                .contact(this.contact)
                 .address(this.address)
                 .latitude(this.latitude)
                 .longitude(this.longitude)
@@ -98,6 +105,7 @@ public class PropertyEntity implements DomainTranslatable<Property>  {
                 .registryDocumentUrl(property.getRegistryDocumentUrl())
                 .catastralReference(property.getCatastralReference())
                 .userId(property.getUserId())
+                .contact(property.getContact())
                 .address(property.getAddress())
                 .latitude(property.getLatitude())
                 .longitude(property.getLongitude())

@@ -27,66 +27,65 @@ public class AddressRepositoryImpl implements AddressRepository {
     private final SpringDataRegionRepository regionJpaRepository;
 
     @Override
-    public Long addCountry(Country country) {
+    public Country addCountry(Country country) {
         Optional<CountryEntity> existingCountry = countryJpaRepository.findByName(country.getName());
         if (existingCountry.isPresent()) {
-
-            return existingCountry.get().getId();
+            return existingCountry.get().toDomain();
         } else {
 
             CountryEntity entity = CountryEntity.fromDomain(country);
             entity = countryJpaRepository.save(entity);
-            return entity.getId();
+            return entity.toDomain();
         }
     }
 
     @Override
-    public Long addCity(City city) {
+    public City addCity(City city) {
         Optional<CityEntity> existingCity = cityJpaRepository.findByName(city.getName());
 
         if (existingCity.isPresent())
         {
-            return existingCity.get().getId();
+            return existingCity.get().toDomain();
         }
         else
         {
             CityEntity entity = CityEntity.fromDomain(city);
             entity = cityJpaRepository.save(entity);
-            return entity.getId();
+            return entity.toDomain();
         }
     }
 
     @Override
-    public Long addPostalCode(PostalCode postalCode) {
+    public PostalCode addPostalCode(PostalCode postalCode) {
 
         Optional<PostalCodeEntity> existingPostalCode = postalCodeJpaRepository.findByCode(postalCode.getCode());
         if (existingPostalCode.isPresent()) {
 
-            return existingPostalCode.get().getId();
+            return existingPostalCode.get().toDomain();
         } else {
 
             PostalCodeEntity entity = PostalCodeEntity.fromDomain(postalCode);
             entity = postalCodeJpaRepository.save(entity);
-            return entity.getId();
+            return entity.toDomain();
         }
     }
 
     @Override
-    public Long addRegion(Region region) {
+    public Region addRegion(Region region) {
 
 
         Optional<RegionEntity> existingRegion = regionJpaRepository.findByName(region.getName());
         if (existingRegion.isPresent()) {
 
-            return existingRegion.get().getId();
+            return existingRegion.get().toDomain();
         } else {
-            CountryEntity countryEntity = countryJpaRepository.findByName(region.getCountry())
-                    .orElseGet(() -> countryJpaRepository.save(CountryEntity.fromDomain(new Country(null, region.getCountry()))));
+            CountryEntity countryEntity = countryJpaRepository.findByName(region.getCountry().getName())
+                    .orElseGet(() -> countryJpaRepository.save(CountryEntity.fromDomain(new Country(null, region.getCountry().getName()))));
 
             RegionEntity entity = RegionEntity.fromDomain(region);
             entity.setCountry(countryEntity);
             entity = regionJpaRepository.save(entity);
-            return entity.getId();
+            return entity.toDomain();
         }
     }
 

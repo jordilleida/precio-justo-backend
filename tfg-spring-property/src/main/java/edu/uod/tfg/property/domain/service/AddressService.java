@@ -2,16 +2,18 @@ package edu.uod.tfg.property.domain.service;
 
 import edu.uod.tfg.property.domain.model.*;
 
-public interface AddressService {
-    Long addCountry(Country country);
-    Long addCity(City city);
-    Long addPostalCode(PostalCode postalCode);
-    Long addRegion(Region region);
+import java.util.Optional;
 
-    Boolean saveCompleteAddress(Property property);
-    Country getCountry(String name);
-    City getCity(String name);
-    Region getRegion(String name);
-    PostalCode getPostalCode(String name);
+public interface AddressService {
+    Country addCountry(Country country);
+    City addCity(City city);
+    PostalCode addPostalCode(PostalCode postalCode);
+    Region addRegion(Region region);
+
+    Property saveCompleteAddress(Property property);
+    Optional<Country> getCountry(String name);
+    Optional<City> getCity(String name);
+    Optional<Region> getRegion(String name);
+    Optional<PostalCode> getPostalCode(String name);
 
 }

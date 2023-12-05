@@ -55,14 +55,6 @@ public class UserServiceImpl implements UserService {
 
     }
     @Override
-    public Optional<UserDetails> getAuthenticatedUser() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
-            return Optional.of((UserDetails) authentication.getPrincipal());
-        }
-        return Optional.empty();
-    }
-    @Override
     public void deleteUser(Long id) {
         userRepository.deleteUser(id);
     }

@@ -26,7 +26,7 @@ public class OwnerHistoryEntity implements DomainTranslatable<OwnerHistory> {
 
     @Column(name = "user_id")
     @NotNull
-    private Integer userId;
+    private Long userId;
 
     @Column(name = "start_date")
     @NotNull
@@ -40,9 +40,21 @@ public class OwnerHistoryEntity implements DomainTranslatable<OwnerHistory> {
         return OwnerHistory.builder()
                 .id(this.id)
                 .userId(this.userId)
-                .propertyId(this.property.getId())
+                .property(this.property.toDomain())
                 .startDate(this.startDate)
                 .endDate(this.endDate)
                 .build();
+    }
+
+    public static OwnerHistoryEntity fromDomain(OwnerHistory ownerHistory) {
+
+        return OwnerHistoryEntity.builder()
+                .id(ownerHistory.getId())
+                .userId(ownerHistory.getUserId())
+                .property(PropertyEntity.fromDomain(ownerHistory.getProperty()))
+                .startDate(ownerHistory.getStartDate())
+                .endDate(ownerHistory.getEndDate())
+                .build();
+
     }
 }

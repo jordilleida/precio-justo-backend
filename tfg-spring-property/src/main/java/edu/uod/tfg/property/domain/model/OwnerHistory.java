@@ -14,9 +14,8 @@ import java.time.LocalDateTime;
 public class OwnerHistory {
     private Long id;
 
-    private Integer userId;
-
-    private Long propertyId;
+    private Long userId;
+    private Property property;
 
     private LocalDateTime startDate;
     private LocalDateTime endDate;

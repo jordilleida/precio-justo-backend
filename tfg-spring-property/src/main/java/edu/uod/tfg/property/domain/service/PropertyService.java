@@ -1,5 +1,6 @@
 package edu.uod.tfg.property.domain.service;
 
+import edu.uod.tfg.property.domain.model.OwnerHistory;
 import edu.uod.tfg.property.domain.model.Property;
 import edu.uod.tfg.property.domain.model.PropertyStatus;
 
@@ -8,14 +9,18 @@ import java.util.Optional;
 
 public interface PropertyService {
    Property createProperty(Property property);
-   Property validateProperty(Property property);
-   Property invalidateProperty(Property property);
-   Property updatePropertyStatus(Long propertyId, PropertyStatus status);
+   Property validateProperty(Long propertyId);
+   Property invalidateProperty(Long propertyId);
+   Property changePropertyStatus(Long propertyId, PropertyStatus status);
    boolean cancelOwner(Long propertyId, Long userId);
    Long registerOwner(Long propertyId, Long userId);
    List<Property> findAllProperties();
-
+   List<Property> findAllPendingValidation();
+   List<Property> findAllPropertiesInAuction();
    List<Property> findActivePropertiesByOwner(Long userId);
 
    Optional<Property> findPropertyById(Long id);
+   Optional<Property> findPropertyByCatastralReference(String reference);
+
+   List<OwnerHistory> findAllOwnersHistory();
 }
