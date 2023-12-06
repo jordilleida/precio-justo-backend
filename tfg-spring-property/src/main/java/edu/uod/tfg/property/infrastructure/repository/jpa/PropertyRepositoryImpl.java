@@ -69,7 +69,7 @@ public class PropertyRepositoryImpl implements PropertyRepository {
 
         OwnerHistoryEntity ownerHistory = ownerHistoryOptional.get();
 
-        ownerHistory.setEndDate(LocalDateTime.now());
+        ownerHistory.setEndDate(Optional.ofNullable(ownerHistory.getEndDate()).orElseGet(LocalDateTime::now));
 
         ownerHistoryRepository.save(ownerHistory);
 

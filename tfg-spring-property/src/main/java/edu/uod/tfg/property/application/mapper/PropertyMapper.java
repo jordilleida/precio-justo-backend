@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class PropertyMapper {
-    public static Property convertToProperty(NewPropertyRequest request) {
+    public static Property convertToDomainEntity(NewPropertyRequest request, Long userId, String userEmail) {
         List<PropertyImage> images = new ArrayList<>();
         if (request.getImageUrls() != null) {
             images = request.getImageUrls().stream()
@@ -30,6 +30,8 @@ public class PropertyMapper {
                 .longitude(request.getLongitude())
                 .address(request.getAddress())
                 .images(images)
+                .userId(userId)
+                .contact(userEmail)
                 // .status y .userId se establecerán en otra parte
                 .build();
     }

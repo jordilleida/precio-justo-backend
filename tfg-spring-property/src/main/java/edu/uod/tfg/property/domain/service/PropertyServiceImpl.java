@@ -4,6 +4,7 @@ import edu.uod.tfg.property.domain.model.OwnerHistory;
 import edu.uod.tfg.property.domain.model.Property;
 import edu.uod.tfg.property.domain.model.PropertyStatus;
 import edu.uod.tfg.property.domain.repository.PropertyRepository;
+import edu.uod.tfg.property.infrastructure.kafka.KafkaPropertyMessagingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,17 +19,21 @@ import java.util.Optional;
 public class PropertyServiceImpl implements PropertyService {
 
     private final PropertyRepository propertyRepository;
+    private final KafkaPropertyMessagingService kafkaPropertyMessagingService;
     @Override
     public Property createProperty(Property property) {
 
-        Optional<Property> existingProperty = findPropertyByCatastralReference(property.getCatastralReference());
+        Optional<Property> existingPropertyOpt = findPropertyByCatastralReference(property.getCatastralReference());
 
-        if (existingProperty.isPresent()) {
+        if (existingPropertyOpt.isPresent()) {
+             Property existingProperty = existingPropertyOpt.get();
+
             //Significa que la propiedad ya existe anteriormente
-             Long existingPropertyId = existingProperty.get().getId();
-             Long existingPropertyUserId = existingProperty.get().getUserId();
+             Long existingPropertyId = existingProperty.getId();
+             Long existingPropertyUserId = existingProperty.getUserId();
 
              cancelOwner(existingPropertyId, existingPropertyUserId);
+
         }
 
         property.setStatus(PropertyStatus.PENDING_VALIDATION);
@@ -44,19 +49,63 @@ public class PropertyServiceImpl implements PropertyService {
                //Nueva row de historyOwner con el nuevo propietario que figura en la propiedad
                registerOwner(propertyId, propetyUserId);
 
-        return changePropertyStatus(propertyId, PropertyStatus.VALIDATED);
+          Property propertyValidated =changePropertyStatus(propertyId, PropertyStatus.VALIDATED);
+
+              //Notifico la validación al usuario
+              kafkaPropertyMessagingService.sendValidateMessage(propertyValidated);
+
+        return propertyValidated;
     }
 
     @Override
     public Property invalidateProperty(Long propertyId) {
-        return changePropertyStatus(propertyId, PropertyStatus.DELETED);
+        Property deletedProperty = changePropertyStatus(propertyId, PropertyStatus.DELETED);
+        //Notifico el estado deleted de invalidado
+        kafkaPropertyMessagingService.sendDeletedMessage(deletedProperty);
+
+        return deletedProperty;
     }
 
+     @Override
+     public Property deleteProperty(Long propertyId, Long petitionUserId){
+
+        if(!isUserActualOwner(propertyId, petitionUserId)) { return null; }
+
+         Property deletedProperty = changePropertyStatus(propertyId, PropertyStatus.DELETED);
+
+                           cancelOwner(deletedProperty.getId(), deletedProperty.getUserId());
+
+         //Notifico el estado deleted
+         kafkaPropertyMessagingService.sendDeletedMessage(deletedProperty);
+
+         return deletedProperty;
+     }
+
+     @Override
+     public boolean isUserActualOwner(Long propertyId, Long userId){
+         Optional<Property> propertyOpt = propertyRepository.findPropertyById(propertyId);
+         if (propertyOpt.isPresent()) {
+             Property property = propertyOpt.get();
+
+             if (property.getUserId() == userId) { return true; }
+         }
+         return false;
+     }
     @Override
     public Property changePropertyStatus(Long propertyId, PropertyStatus status) {
         return propertyRepository.setPropertyStatus(propertyId, status.toString());
     }
 
+    @Override
+    public boolean sendChangePropertyRequest(Property property, String userRequestEmail){
+        //Si es el mismo usuario propietario actual no se envia ningún email
+        if(property.getContact() == userRequestEmail)
+                                           return true;
+
+        //Notifico el estado deleted
+        kafkaPropertyMessagingService.sendChangeRequestMessage(property, userRequestEmail);
+        return true;
+    }
     @Override
     public boolean cancelOwner(Long propertyId, Long userId) {
         return propertyRepository.cancelOwner(propertyId, userId);

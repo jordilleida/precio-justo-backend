@@ -11,9 +11,14 @@ public interface PropertyService {
    Property createProperty(Property property);
    Property validateProperty(Long propertyId);
    Property invalidateProperty(Long propertyId);
+
+   Property deleteProperty(Long propertyId, Long petitionUserId);
    Property changePropertyStatus(Long propertyId, PropertyStatus status);
    boolean cancelOwner(Long propertyId, Long userId);
    Long registerOwner(Long propertyId, Long userId);
+
+   boolean sendChangePropertyRequest(Property property, String userRequestEmail);
+   boolean isUserActualOwner(Long propertyId, Long userId);
    List<Property> findAllProperties();
    List<Property> findAllPendingValidation();
    List<Property> findAllPropertiesInAuction();

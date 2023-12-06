@@ -107,6 +107,25 @@ public class PropertyRESTController {
         }
     }
 
+    @PutMapping("/delete/{propertyId}")
+    @PreAuthorize("hasRole('ROLE_SELLER')")
+    public ResponseEntity<Property> deleteProperty(@PathVariable Long propertyId) {
+
+        Optional<CustomUserDetails> userDetails = userService.getAuthenticatedUser();
+        if (!userDetails.isPresent()) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+        Long authenticatedUserId = userDetails.get().getUserId();
+
+        Property property = propertyService.deleteProperty(propertyId, authenticatedUserId);
+
+        if (property != null) {
+            return ResponseEntity.ok(property);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
     @PostMapping("/create")
     public ResponseEntity<String> createProperty(@Valid @RequestBody NewPropertyRequest newPropertyRequest) {
 
@@ -121,26 +140,28 @@ public class PropertyRESTController {
         Long userId = userDetails.get().getUserId();
         String email = userDetails.get().getUsername();
 
-        Optional<Property> existingProperty = propertyService.findPropertyByCatastralReference(newPropertyRequest.getCatastralReference());
+        Optional<Property> existingPropertyOpt = propertyService.findPropertyByCatastralReference(newPropertyRequest.getCatastralReference());
 
-        if (existingProperty.isPresent()) {
+        if (existingPropertyOpt.isPresent()) {
 
-            PropertyStatus status = existingProperty.get().getStatus();
+            Property existingProperty = existingPropertyOpt.get();
+
+            PropertyStatus status = existingProperty.getStatus();
 
             if (!(status == PropertyStatus.SOLD || status == PropertyStatus.DELETED)) {
-                // Utiliza el email extraído para enviar un email al propietario actual si es necesario
-                // Lógica para enviar email y generar respuesta adecuada
+
+                // Utilizo el email de la petición para enviar un email al propietario actual si es necesario
+                propertyService.sendChangePropertyRequest(existingProperty, email);
+
                 String responseMessage = "La propiedad no se puede agregar por estar actualmente activa," +
-                                         "se ha enviado email al propietario actual, si la da de baja podrá insertarla.";
+                                         "se ha enviado email al propietario actual, si la da de baja podrás crearla.";
 
                 return ResponseEntity.unprocessableEntity().body(responseMessage);
             }
         }
 
         // Convertir NewPropertyRequest a Property y establecer userId y email
-        Property newProperty = PropertyMapper.convertToProperty(newPropertyRequest);
-        newProperty.setUserId(userId);
-        newProperty.setContact(email);
+        Property newProperty = PropertyMapper.convertToDomainEntity(newPropertyRequest, userId, email);
 
         // Crear la dirección de la propiedad
         PostalCode completeAddress = addressService.saveCompleteAddress(newPropertyRequest.getCountry(),
@@ -148,23 +169,17 @@ public class PropertyRESTController {
                                                                             newPropertyRequest.getCity(),
                                                                               newPropertyRequest.getPostalCode());
 
-       newProperty.setPostalCode(completeAddress);
+        newProperty.setPostalCode(completeAddress);
 
         // Creo la propiedad a través del PropertyService
         Property createdProperty = propertyService.createProperty(newProperty);
 
-        String responseMessage;
-        if (createdProperty != null) {
-            log.info("Property created with ID: " + createdProperty.getId());
-            responseMessage = "Propiedad creada pendiente de validación.";
-        } else {
-            responseMessage = "Error al crear la propiedad.";
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(responseMessage);
+        if(createdProperty == null){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear la propiedad.");
         }
 
-        return ResponseEntity.ok(responseMessage);
+        log.info("Property created with ID: " + createdProperty.getId());
+
+        return ResponseEntity.ok("Propiedad creada pendiente de validación.");
     }
-
-
-
 }

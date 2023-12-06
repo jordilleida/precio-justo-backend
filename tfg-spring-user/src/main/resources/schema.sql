@@ -1,7 +1,7 @@
 INSERT INTO users (name, surname, email, password, disabled)
 VALUES  ('Jordi', 'Prueba', 'jordi@uoc.edu', '123', false),
         ('Pepe', 'Prueba', 'pepe@uoc.edu', '123', false),
-        ('Juan', 'Prueba', 'juan@uoc.edu', '123', false),
+        ('Juan', 'Prueba', 'jordimimbrera@gmail.com', '123', false),
         ('Pablo', 'Prueba', 'pablo@uoc.edu', '123', false);
 
 INSERT INTO roles (name) VALUES ('BUYER'), ('SELLER') , ('ADMIN');
