@@ -10,4 +10,5 @@ public interface SpringDataPropertyRepository extends JpaRepository<PropertyEnti
     Optional<PropertyEntity> findByCatastralReference(String reference);
 
     List<PropertyEntity> findAllByStatus(String status);
+    List<PropertyEntity> findByUserIdAndStatusNot(Long userId, String status);
 }

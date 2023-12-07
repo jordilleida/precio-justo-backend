@@ -95,35 +95,6 @@ public class UserRESTController {
     	return ResponseEntity.ok().body(userRequest);
     }
 
-    @PutMapping("/users/{email}/add-seller")
-    @PreAuthorize("hasRole('ROLE_BUYER')")
-    public ResponseEntity<?> addSellerRoleToUser(@PathVariable String email) {
-        try {
-            Optional<User> userOptional = userService.findUserByMail(email);
-
-            if (userOptional.isEmpty()) {
-                log.info("User not found: " + email);
-                return ResponseEntity.notFound().build();
-            }
-
-            User user = userOptional.get();
-            Role sellerRole = roleService.getSellerRole();
-
-            if (user.getRoles().contains(sellerRole))
-                                return ResponseEntity.ok().build();
-
-            user.getRoles().add(sellerRole);
-            userService.updateUser(user);
-
-            log.info("SELLER role added to user: " + user.getId());
-            return ResponseEntity.ok().build();
-
-        } catch (Exception e) {
-            log.error("Error adding SELLER role to user: " + e.getMessage());
-            return ResponseEntity.internalServerError().build();
-        }
-    }
-
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/users")
     @ResponseStatus(HttpStatus.OK)

@@ -17,8 +17,9 @@ public interface PropertyRepository {
     List<Property> findAllInAuction();
     List<Property> findActivePropertiesByOwner(Long userId);
     List<Property> findInAuctionPropertiesByOwner(Long userId);
+
+    List<Property> findByUserIdAndStatusNot(Long userId, String deletedStatus);
     Optional<Property> findPropertyById(Long id);
     Optional<Property> findPropertyByCatastralReference(String reference);
-
     List<OwnerHistory> findAllOwnersHistory();
 }

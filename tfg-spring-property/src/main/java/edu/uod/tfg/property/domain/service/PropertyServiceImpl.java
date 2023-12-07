@@ -65,6 +65,12 @@ public class PropertyServiceImpl implements PropertyService {
 
         return deletedProperty;
     }
+    @Override
+    public List<Property> findPropertiesByUserExcludingDeleted(Long userId) {
+        String deletedStatus = PropertyStatus.DELETED.toString();
+
+        return propertyRepository.findByUserIdAndStatusNot(userId, deletedStatus);
+    }
 
      @Override
      public Property deleteProperty(Long propertyId, Long petitionUserId){

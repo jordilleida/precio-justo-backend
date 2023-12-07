@@ -119,6 +119,14 @@ public class PropertyRepositoryImpl implements PropertyRepository {
     }
 
     @Override
+    public List<Property> findByUserIdAndStatusNot(Long userId, String deletedStatus) {
+
+        return propertyRepository.findByUserIdAndStatusNot(userId, deletedStatus).stream()
+                .map(PropertyEntity::toDomain)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public Optional<Property> findPropertyById(Long id) {
         return propertyRepository.findById(id)
                 .map(PropertyEntity::toDomain);

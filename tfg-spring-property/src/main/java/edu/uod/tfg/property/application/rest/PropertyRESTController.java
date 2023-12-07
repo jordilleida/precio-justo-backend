@@ -49,7 +49,16 @@ public class PropertyRESTController {
             return ResponseEntity.ok(properties);
         }
     }
-
+    @GetMapping("/properties/{userId}")
+    @PreAuthorize("hasRole('ROLE_SELLER')")
+    public ResponseEntity<List<Property>> getUserProperties(@PathVariable Long userId) {
+        List<Property> properties = propertyService.findPropertiesByUserExcludingDeleted(userId);
+        if (properties.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(properties);
+        }
+    }
     @GetMapping("/owners")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<List<OwnerHistory>> findOwners() {
@@ -85,8 +94,6 @@ public class PropertyRESTController {
     @PutMapping("/validate/{propertyId}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<Property> validateProperty(@PathVariable Long propertyId) {
-        //Muy importante recordar que es aqui donde se registra definitivamente
-        // el nuevo propietario en el historyOwner y el anterior se pone como endDate de baja
 
         Property property = propertyService.validateProperty(propertyId);
         if (property != null) {

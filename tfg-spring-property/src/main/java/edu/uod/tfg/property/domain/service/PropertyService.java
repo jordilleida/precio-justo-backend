@@ -23,7 +23,7 @@ public interface PropertyService {
    List<Property> findAllPendingValidation();
    List<Property> findAllPropertiesInAuction();
    List<Property> findActivePropertiesByOwner(Long userId);
-
+   List<Property> findPropertiesByUserExcludingDeleted(Long userId);
    Optional<Property> findPropertyById(Long id);
    Optional<Property> findPropertyByCatastralReference(String reference);
 
