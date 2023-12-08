@@ -32,7 +32,7 @@ public class PropertyMapper {
                 .images(images)
                 .userId(userId)
                 .contact(userEmail)
-                // .status y .userId se establecerán en otra parte
+                // .status se establecerá en otra parte
                 .build();
     }
 
