@@ -52,6 +52,16 @@ public class PropertyRESTController {
     @GetMapping("/properties/{userId}")
     @PreAuthorize("hasRole('ROLE_SELLER')")
     public ResponseEntity<List<Property>> getUserProperties(@PathVariable Long userId) {
+
+        Optional<CustomUserDetails> userDetails = userService.getAuthenticatedUser();
+        if (!userDetails.isPresent())
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+
+        Long authenticatedUserId = userDetails.get().getUserId();
+
+        if(authenticatedUserId != userId)
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+
         List<Property> properties = propertyService.findPropertiesByUserExcludingDeleted(userId);
         if (properties.isEmpty()) {
             return ResponseEntity.noContent().build();

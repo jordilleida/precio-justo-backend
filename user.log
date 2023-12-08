@@ -1,61 +1,27 @@
-2023-12-07 16:05:17.279  WARN 17304 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20h12m28s822ms816µs300ns).
-2023-12-07 16:05:19.930  INFO 17304 --- [kafka-coordinator-heartbeat-thread | user-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Group coordinator localhost:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: null.isDisconnected: true. Rediscovery will be attempted.
-2023-12-07 16:05:22.008  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-user-group-1, groupId=user-group] Error sending fetch request (sessionId=914144460, epoch=4715) to node 1:
+2023-12-08 09:15:11.263  INFO 6120 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 6120 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-12-08 09:15:11.271  INFO 6120 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
+2023-12-08 09:15:12.546  INFO 6120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-08 09:15:12.647  INFO 6120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2023-12-08 09:15:13.838  INFO 6120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
+2023-12-08 09:15:13.848  INFO 6120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-08 09:15:13.848  INFO 6120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-12-08 09:15:14.011  INFO 6120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-08 09:15:14.011  INFO 6120 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2362 ms
+2023-12-08 09:15:14.258  INFO 6120 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-08 09:15:14.341  INFO 6120 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2023-12-08 09:15:14.554  INFO 6120 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-12-08 09:15:14.740  INFO 6120 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-08 09:15:15.090  INFO 6120 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-08 09:15:15.123  INFO 6120 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-12-08 09:15:16.633  INFO 6120 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-08 09:15:16.645  INFO 6120 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08 09:15:17.513  INFO 6120 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-org.apache.kafka.common.errors.DisconnectException: null
+Using generated security password: 2442d78a-48ca-448f-9d1b-3c2e33f63076
 
-2023-12-07 16:05:23.755  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.755  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.755  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.755  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.765  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.765  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.765  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.765  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.822  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.822  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.832  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:05:23.832  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 16:28:04.213  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Revoke previously assigned partitions property.validated-0
-2023-12-07 16:28:04.262  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : user-group: partitions revoked: [property.validated-0]
-2023-12-07 16:28:04.263  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Member consumer-user-group-1-6cbb8654-1587-4e9d-96ab-3114ad698061 sending LeaveGroup request to coordinator localhost:19092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
-2023-12-07 16:28:04.340  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Resetting generation due to: consumer pro-actively leaving the group
-2023-12-07 16:28:04.340  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Request joining group due to: consumer pro-actively leaving the group
-2023-12-07 16:28:04.341  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-user-group-1, groupId=user-group] Unsubscribed all topics or patterns and assigned partitions
-2023-12-07 16:28:04.347  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Resetting generation due to: consumer pro-actively leaving the group
-2023-12-07 16:28:04.349  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Request joining group due to: consumer pro-actively leaving the group
-2023-12-07 16:28:04.510  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
-2023-12-07 16:28:04.510  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2023-12-07 16:28:04.511  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
-2023-12-07 16:28:04.527  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-user-group-1 unregistered
-2023-12-07 16:28:04.532  INFO 17304 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : user-group: Consumer stopped
-2023-12-07 16:28:04.607  INFO 17304 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-07 16:28:04.699  INFO 17304 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-07 16:28:04.739  INFO 17304 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-07 17:44:00.326  INFO 22880 --- [main] edu.uoc.epcsd.user.UserApplication       : Starting UserApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 22880 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-user\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
-2023-12-07 17:44:00.330  INFO 22880 --- [main] edu.uoc.epcsd.user.UserApplication       : No active profile set, falling back to default profiles: default
-2023-12-07 17:44:02.049  INFO 22880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-07 17:44:02.174  INFO 22880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 2 JPA repository interfaces.
-2023-12-07 17:44:03.434  INFO 22880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 18084 (http)
-2023-12-07 17:44:03.450  INFO 22880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-07 17:44:03.450  INFO 22880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2023-12-07 17:44:03.627  INFO 22880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-07 17:44:03.633  INFO 22880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2921 ms
-2023-12-07 17:44:03.889  INFO 22880 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-07 17:44:03.968  INFO 22880 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
-2023-12-07 17:44:04.178  INFO 22880 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-12-07 17:44:04.333  INFO 22880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-07 17:44:04.635  INFO 22880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-07 17:44:04.666  INFO 22880 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2023-12-07 17:44:05.823  INFO 22880 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-12-07 17:44:05.833  INFO 22880 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-07 17:44:06.551  INFO 22880 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: d9230a11-ecf1-49dc-8ee9-aa1d1a4d0949
-
-2023-12-07 17:44:06.733  INFO 22880 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b66bf1c, org.springframework.security.web.context.SecurityContextPersistenceFilter@237d0625, org.springframework.security.web.header.HeaderWriterFilter@337fb1a5, org.springframework.security.web.authentication.logout.LogoutFilter@37196d53, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@4c6a4ffd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5392aa2b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@174f0d06, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47eff554, org.springframework.security.web.session.SessionManagementFilter@1a390b8c, org.springframework.security.web.access.ExceptionTranslationFilter@29a50a11, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7abd75fc]
-2023-12-07 17:44:07.006  WARN 22880 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-07 17:44:08.419  INFO 22880 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+2023-12-08 09:15:17.705  INFO 6120 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@346690d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@498b697, org.springframework.security.web.header.HeaderWriterFilter@40105b39, org.springframework.security.web.authentication.logout.LogoutFilter@46b55a0e, edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter@38f981b6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6987b74e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22e95960, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2831c178, org.springframework.security.web.session.SessionManagementFilter@74a3160d, org.springframework.security.web.access.ExceptionTranslationFilter@104cf647, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8aa1562]
+2023-12-08 09:15:17.964  WARN 6120 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-08 09:15:19.354  INFO 6120 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
 	bootstrap.servers = [localhost:19092]
 	client.dns.lookup = use_all_dns_ips
 	client.id = 
@@ -111,14 +77,14 @@ Using generated security password: d9230a11-ecf1-49dc-8ee9-aa1d1a4d0949
 	ssl.truststore.password = null
 	ssl.truststore.type = JKS
 
-2023-12-07 17:44:08.512  INFO 22880 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
-2023-12-07 17:44:08.512  INFO 22880 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
-2023-12-07 17:44:08.512  INFO 22880 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1701967448512
-2023-12-07 17:44:09.057  INFO 22880 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
-2023-12-07 17:44:09.065  INFO 22880 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
-2023-12-07 17:44:09.065  INFO 22880 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2023-12-07 17:44:09.066  INFO 22880 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
-2023-12-07 17:44:09.105  INFO 22880 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2023-12-08 09:15:19.479  INFO 6120 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-12-08 09:15:19.479  INFO 6120 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-12-08 09:15:19.479  INFO 6120 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1702023319464
+2023-12-08 09:15:20.128  INFO 6120 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-12-08 09:15:20.132  INFO 6120 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-12-08 09:15:20.135  INFO 6120 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-08 09:15:20.135  INFO 6120 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-12-08 09:15:20.176  INFO 6120 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.offset.reset = latest
@@ -197,159 +163,37 @@ Using generated security password: d9230a11-ecf1-49dc-8ee9-aa1d1a4d0949
 	ssl.truststore.type = JKS
 	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
 
-2023-12-07 17:44:09.168  INFO 22880 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
-2023-12-07 17:44:09.168  INFO 22880 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
-2023-12-07 17:44:09.168  INFO 22880 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1701967449168
-2023-12-07 17:44:09.168  INFO 22880 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-user-group-1, groupId=user-group] Subscribed to topic(s): property.validated
-2023-12-07 17:44:09.215  INFO 22880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
-2023-12-07 17:44:09.230  INFO 22880 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 9.542 seconds (JVM running for 13.71)
-2023-12-07 17:44:09.257  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-user-group-1, groupId=user-group] Cluster ID: 5hHOxfIeTTqJmXHyivfT_g
-2023-12-07 17:44:09.285  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
-2023-12-07 17:44:09.288  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] (Re-)joining group
-2023-12-07 17:44:09.614  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Request joining group due to: need to re-join with the given member-id
-2023-12-07 17:44:09.614  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] (Re-)joining group
-2023-12-07 17:44:12.792  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Successfully joined group with generation Generation{generationId=9, memberId='consumer-user-group-1-b1c2d1ee-e190-451a-ac03-5795bc7d90ff', protocol='range'}
-2023-12-07 17:44:12.795  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Finished assignment for group at generation 9: {consumer-user-group-1-b1c2d1ee-e190-451a-ac03-5795bc7d90ff=Assignment(partitions=[property.validated-0])}
-2023-12-07 17:44:13.130  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Successfully synced group in generation Generation{generationId=9, memberId='consumer-user-group-1-b1c2d1ee-e190-451a-ac03-5795bc7d90ff', protocol='range'}
-2023-12-07 17:44:13.130  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Notifying assignor about the new Assignment(partitions=[property.validated-0])
-2023-12-07 17:44:13.130  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Adding newly assigned partitions: property.validated-0
-2023-12-07 17:44:13.185  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Setting offset for partition property.validated-0 to the committed offset FetchPosition{offset=10, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:19092 (id: 1 rack: null)], epoch=0}}
-2023-12-07 17:44:13.186  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : user-group: partitions assigned: [property.validated-0]
-2023-12-07 17:45:34.732  INFO 22880 --- [http-nio-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-07 17:45:34.744  INFO 22880 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-07 17:45:34.864  INFO 22880 --- [http-nio-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 118 ms
-2023-12-07 17:45:35.057 ERROR 22880 --- [http-nio-18084-exec-1] e.u.e.u.domain.service.TokenServiceImpl  : Error solving JWT: 
-
-com.auth0.jwt.exceptions.TokenExpiredException: The Token has expired on Thu Dec 07 09:05:30 CET 2023.
-	at com.auth0.jwt.JWTVerifier.assertDateIsFuture(JWTVerifier.java:420) ~[java-jwt-3.18.2.jar:3.18.2]
-	at com.auth0.jwt.JWTVerifier.assertValidDateClaim(JWTVerifier.java:411) ~[java-jwt-3.18.2.jar:3.18.2]
-	at com.auth0.jwt.JWTVerifier.verifyClaimValues(JWTVerifier.java:331) ~[java-jwt-3.18.2.jar:3.18.2]
-	at com.auth0.jwt.JWTVerifier.verifyClaims(JWTVerifier.java:315) ~[java-jwt-3.18.2.jar:3.18.2]
-	at com.auth0.jwt.JWTVerifier.verify(JWTVerifier.java:300) ~[java-jwt-3.18.2.jar:3.18.2]
-	at com.auth0.jwt.JWTVerifier.verify(JWTVerifier.java:283) ~[java-jwt-3.18.2.jar:3.18.2]
-	at edu.uoc.epcsd.user.domain.service.TokenServiceImpl.solveToken(TokenServiceImpl.java:57) ~[classes/:na]
-	at edu.uoc.epcsd.user.domain.service.TokenServiceImpl.extractUserDetails(TokenServiceImpl.java:73) ~[classes/:na]
-	at edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter.doFilterInternal(JwtTokenAuthenticationFilter.java:31) ~[classes/:na]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2023-12-07 17:45:35.068 ERROR 22880 --- [http-nio-18084-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-
-java.lang.RuntimeException: Token solving failed.
-	at edu.uoc.epcsd.user.domain.service.TokenServiceImpl.solveToken(TokenServiceImpl.java:68) ~[classes/:na]
-	at edu.uoc.epcsd.user.domain.service.TokenServiceImpl.extractUserDetails(TokenServiceImpl.java:73) ~[classes/:na]
-	at edu.uoc.epcsd.user.infrastructure.web.filter.JwtTokenAuthenticationFilter.doFilterInternal(JwtTokenAuthenticationFilter.java:31) ~[classes/:na]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.1.jar:5.6.1]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.14.jar:5.3.14]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2023-12-07 17:48:13.631  WARN 22880 --- [http-nio-18084-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2023-12-07 17:49:20.273  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Revoke previously assigned partitions property.validated-0
-2023-12-07 17:49:20.277  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : user-group: partitions revoked: [property.validated-0]
-2023-12-07 17:49:20.280  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Member consumer-user-group-1-b1c2d1ee-e190-451a-ac03-5795bc7d90ff sending LeaveGroup request to coordinator localhost:19092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
-2023-12-07 17:49:20.287  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Resetting generation due to: consumer pro-actively leaving the group
-2023-12-07 17:49:20.287  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Request joining group due to: consumer pro-actively leaving the group
-2023-12-07 17:49:20.287  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-user-group-1, groupId=user-group] Unsubscribed all topics or patterns and assigned partitions
-2023-12-07 17:49:20.289  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Resetting generation due to: consumer pro-actively leaving the group
-2023-12-07 17:49:20.290  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Request joining group due to: consumer pro-actively leaving the group
-2023-12-07 17:49:20.476  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
-2023-12-07 17:49:20.476  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2023-12-07 17:49:20.476  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
-2023-12-07 17:49:20.482  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-user-group-1 unregistered
-2023-12-07 17:49:20.485  INFO 22880 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : user-group: Consumer stopped
-2023-12-07 17:49:20.506  INFO 22880 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-07 17:49:20.527  INFO 22880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-07 17:49:20.538  INFO 22880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-08 09:15:20.226  INFO 6120 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.0.0
+2023-12-08 09:15:20.226  INFO 6120 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8cb0a5e9d3441962
+2023-12-08 09:15:20.226  INFO 6120 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1702023320226
+2023-12-08 09:15:20.226  INFO 6120 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-user-group-1, groupId=user-group] Subscribed to topic(s): property.validated
+2023-12-08 09:15:20.267  INFO 6120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 18084 (http) with context path ''
+2023-12-08 09:15:20.284  INFO 6120 --- [main] edu.uoc.epcsd.user.UserApplication       : Started UserApplication in 9.606 seconds (JVM running for 11.106)
+2023-12-08 09:15:20.284  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-user-group-1, groupId=user-group] Cluster ID: 5hHOxfIeTTqJmXHyivfT_g
+2023-12-08 09:15:20.315  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Discovered group coordinator localhost:19092 (id: 2147483646 rack: null)
+2023-12-08 09:15:20.317  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] (Re-)joining group
+2023-12-08 09:15:20.432  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Request joining group due to: need to re-join with the given member-id
+2023-12-08 09:15:20.432  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] (Re-)joining group
+2023-12-08 09:15:23.524  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Successfully joined group with generation Generation{generationId=15, memberId='consumer-user-group-1-f7d344db-9c48-4be9-b62d-0ce2345836f5', protocol='range'}
+2023-12-08 09:15:23.530  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Finished assignment for group at generation 15: {consumer-user-group-1-f7d344db-9c48-4be9-b62d-0ce2345836f5=Assignment(partitions=[property.validated-0])}
+2023-12-08 09:15:23.864  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Successfully synced group in generation Generation{generationId=15, memberId='consumer-user-group-1-f7d344db-9c48-4be9-b62d-0ce2345836f5', protocol='range'}
+2023-12-08 09:15:23.865  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Notifying assignor about the new Assignment(partitions=[property.validated-0])
+2023-12-08 09:15:23.869  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Adding newly assigned partitions: property.validated-0
+2023-12-08 09:15:23.921  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Setting offset for partition property.validated-0 to the committed offset FetchPosition{offset=10, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:19092 (id: 1 rack: null)], epoch=0}}
+2023-12-08 09:15:23.921  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : user-group: partitions assigned: [property.validated-0]
+2023-12-08 09:16:24.353  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Revoke previously assigned partitions property.validated-0
+2023-12-08 09:16:24.361  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : user-group: partitions revoked: [property.validated-0]
+2023-12-08 09:16:24.365  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Member consumer-user-group-1-f7d344db-9c48-4be9-b62d-0ce2345836f5 sending LeaveGroup request to coordinator localhost:19092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2023-12-08 09:16:24.375  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Resetting generation due to: consumer pro-actively leaving the group
+2023-12-08 09:16:24.375  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Request joining group due to: consumer pro-actively leaving the group
+2023-12-08 09:16:24.376  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-user-group-1, groupId=user-group] Unsubscribed all topics or patterns and assigned partitions
+2023-12-08 09:16:24.379  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Resetting generation due to: consumer pro-actively leaving the group
+2023-12-08 09:16:24.380  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-user-group-1, groupId=user-group] Request joining group due to: consumer pro-actively leaving the group
+2023-12-08 09:16:24.465  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2023-12-08 09:16:24.466  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-08 09:16:24.473  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2023-12-08 09:16:24.496  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-user-group-1 unregistered
+2023-12-08 09:16:24.508  INFO 6120 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : user-group: Consumer stopped
+2023-12-08 09:16:24.674  INFO 6120 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08 09:16:24.750  INFO 6120 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-08 09:16:24.767  INFO 6120 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
