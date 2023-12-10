@@ -24,10 +24,12 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
 
     @Autowired
     private TokenService tokenService;
-    private static final Set<String> EXEMPT_ROUTES = Set.of("/user/login","/user/register","/property/auction");
+    private static final Set<String> EXEMPT_ROUTES = Set.of("/user/login","/user/register",
+                                                            "/property/auction", "/auction/active");
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+
         String path = exchange.getRequest().getPath().toString();
 
         if (isPublicRoute(path)) {
