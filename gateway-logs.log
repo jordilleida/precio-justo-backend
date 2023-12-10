@@ -1,0 +1,161 @@
+2023-12-10 13:24:40.434  INFO 14904 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Starting TfgSpringGatewayApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 14904 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-gateway\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-12-10 13:24:40.438  INFO 14904 --- [main] e.u.t.g.TfgSpringGatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-12-10 13:24:41.393  INFO 14904 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=676c6fb4-3240-391f-b0f6-77cd7aa95440
+2023-12-10 13:24:43.193  INFO 14904 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 13:24:43.744  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2023-12-10 13:24:43.744  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2023-12-10 13:24:43.744  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2023-12-10 13:24:43.744  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2023-12-10 13:24:43.745  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2023-12-10 13:24:43.745  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2023-12-10 13:24:43.746  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2023-12-10 13:24:43.746  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2023-12-10 13:24:43.747  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2023-12-10 13:24:43.747  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2023-12-10 13:24:43.747  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2023-12-10 13:24:43.747  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2023-12-10 13:24:43.748  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2023-12-10 13:24:43.749  INFO 14904 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2023-12-10 13:24:45.361  INFO 14904 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 13:24:45.733  INFO 14904 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-12-10 13:24:47.040  INFO 14904 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 13:24:48.543  INFO 14904 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 13:24:48.676  INFO 14904 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Started TfgSpringGatewayApplication in 10.263 seconds (JVM running for 11.059)
+2023-12-10 13:32:15.802  INFO 10700 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Starting TfgSpringGatewayApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 10700 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-gateway\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-12-10 13:32:15.806  INFO 10700 --- [main] e.u.t.g.TfgSpringGatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-12-10 13:32:16.797  INFO 10700 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=676c6fb4-3240-391f-b0f6-77cd7aa95440
+2023-12-10 13:32:18.606  INFO 10700 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 13:32:19.229  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2023-12-10 13:32:19.230  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2023-12-10 13:32:19.230  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2023-12-10 13:32:19.230  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2023-12-10 13:32:19.230  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2023-12-10 13:32:19.230  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2023-12-10 13:32:19.230  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2023-12-10 13:32:19.231  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2023-12-10 13:32:19.231  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2023-12-10 13:32:19.231  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2023-12-10 13:32:19.231  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2023-12-10 13:32:19.231  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2023-12-10 13:32:19.232  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2023-12-10 13:32:19.232  INFO 10700 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2023-12-10 13:32:21.990  INFO 10700 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 13:32:22.445  INFO 10700 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-12-10 13:32:23.858  INFO 10700 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 13:32:25.208  INFO 10700 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 13:32:25.303  INFO 10700 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Started TfgSpringGatewayApplication in 12.186 seconds (JVM running for 13.217)
+2023-12-10 14:31:18.313  INFO 20116 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Starting TfgSpringGatewayApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 20116 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-gateway\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-12-10 14:31:18.317  INFO 20116 --- [main] e.u.t.g.TfgSpringGatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-12-10 14:31:19.871  INFO 20116 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=676c6fb4-3240-391f-b0f6-77cd7aa95440
+2023-12-10 14:31:21.796  INFO 20116 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:31:22.303  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2023-12-10 14:31:22.303  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2023-12-10 14:31:22.303  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2023-12-10 14:31:22.303  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2023-12-10 14:31:22.304  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2023-12-10 14:31:22.304  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2023-12-10 14:31:22.304  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2023-12-10 14:31:22.304  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2023-12-10 14:31:22.305  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2023-12-10 14:31:22.305  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2023-12-10 14:31:22.306  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2023-12-10 14:31:22.306  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2023-12-10 14:31:22.306  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2023-12-10 14:31:22.307  INFO 20116 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2023-12-10 14:31:23.966  INFO 20116 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:31:24.423  INFO 20116 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-12-10 14:31:25.780  INFO 20116 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:31:27.309  INFO 20116 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:31:27.458  INFO 20116 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Started TfgSpringGatewayApplication in 11.056 seconds (JVM running for 13.503)
+2023-12-10 14:35:35.626  INFO 15604 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Starting TfgSpringGatewayApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 15604 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-gateway\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-12-10 14:35:35.637  INFO 15604 --- [main] e.u.t.g.TfgSpringGatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-12-10 14:35:37.543  INFO 15604 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=676c6fb4-3240-391f-b0f6-77cd7aa95440
+2023-12-10 14:35:39.674  INFO 15604 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:35:40.944  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2023-12-10 14:35:40.945  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2023-12-10 14:35:40.945  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2023-12-10 14:35:40.945  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2023-12-10 14:35:40.945  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2023-12-10 14:35:40.945  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2023-12-10 14:35:40.945  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2023-12-10 14:35:40.946  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2023-12-10 14:35:40.946  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2023-12-10 14:35:40.948  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2023-12-10 14:35:40.949  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2023-12-10 14:35:40.950  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2023-12-10 14:35:40.951  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2023-12-10 14:35:40.951  INFO 15604 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2023-12-10 14:35:43.253  INFO 15604 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:35:43.729  INFO 15604 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-12-10 14:35:45.167  INFO 15604 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:35:46.680  INFO 15604 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:35:46.793  INFO 15604 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Started TfgSpringGatewayApplication in 13.852 seconds (JVM running for 15.856)
+2023-12-10 14:45:45.781  INFO 5076 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Starting TfgSpringGatewayApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 5076 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-gateway\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-12-10 14:45:45.786  INFO 5076 --- [main] e.u.t.g.TfgSpringGatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-12-10 14:45:46.731  INFO 5076 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=676c6fb4-3240-391f-b0f6-77cd7aa95440
+2023-12-10 14:45:48.758  INFO 5076 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:45:49.382  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2023-12-10 14:45:49.382  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2023-12-10 14:45:49.382  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2023-12-10 14:45:49.382  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2023-12-10 14:45:49.383  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2023-12-10 14:45:49.383  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2023-12-10 14:45:49.383  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2023-12-10 14:45:49.383  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2023-12-10 14:45:49.383  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2023-12-10 14:45:49.384  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2023-12-10 14:45:49.384  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2023-12-10 14:45:49.384  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2023-12-10 14:45:49.385  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2023-12-10 14:45:49.385  INFO 5076 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2023-12-10 14:45:51.069  INFO 5076 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:45:51.539  INFO 5076 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-12-10 14:45:52.908  INFO 5076 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:45:54.372  INFO 5076 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 14:45:54.500  INFO 5076 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Started TfgSpringGatewayApplication in 10.797 seconds (JVM running for 12.461)
+2023-12-10 15:02:50.890  INFO 20392 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Starting TfgSpringGatewayApplication using Java 17.0.5 on DESKTOP-0N811RM with PID 20392 (C:\Users\Jordi\Documents\precio-justo-backend\tfg-spring-gateway\target\classes started by Jordi in C:\Users\Jordi\Documents\precio-justo-backend)
+2023-12-10 15:02:50.904  INFO 20392 --- [main] e.u.t.g.TfgSpringGatewayApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-12-10 15:02:53.528  INFO 20392 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=676c6fb4-3240-391f-b0f6-77cd7aa95440
+2023-12-10 15:02:55.821  INFO 20392 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 15:02:56.512  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2023-12-10 15:02:56.512  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2023-12-10 15:02:56.513  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2023-12-10 15:02:56.513  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2023-12-10 15:02:56.514  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2023-12-10 15:02:56.515  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2023-12-10 15:02:56.515  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2023-12-10 15:02:56.516  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2023-12-10 15:02:56.518  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2023-12-10 15:02:56.518  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2023-12-10 15:02:56.519  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2023-12-10 15:02:56.519  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2023-12-10 15:02:56.520  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2023-12-10 15:02:56.521  INFO 20392 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2023-12-10 15:02:58.462  INFO 20392 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 15:02:58.840  INFO 20392 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-12-10 15:03:00.159  INFO 20392 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 15:03:01.513  INFO 20392 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-10 15:03:01.820  INFO 20392 --- [main] e.u.t.g.TfgSpringGatewayApplication      : Started TfgSpringGatewayApplication in 13.983 seconds (JVM running for 15.302)
+2023-12-10 15:03:22.157 ERROR 20392 --- [reactor-http-nio-3] a.w.r.e.AbstractErrorWebExceptionHandler : [2cbf4502-1]  500 Server Error for HTTP POST "/auction/bid"
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:18085
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ HTTP POST "/auction/bid" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.75.Final.jar:4.1.75.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.75.Final.jar:4.1.75.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710) ~[netty-transport-4.1.75.Final.jar:4.1.75.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[netty-transport-4.1.75.Final.jar:4.1.75.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[netty-transport-4.1.75.Final.jar:4.1.75.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[netty-transport-4.1.75.Final.jar:4.1.75.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986) ~[netty-common-4.1.75.Final.jar:4.1.75.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.75.Final.jar:4.1.75.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.75.Final.jar:4.1.75.Final]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+

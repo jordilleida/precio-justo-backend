@@ -6,6 +6,8 @@ import edu.uoc.tfg.auction.domain.model.Bid;
 import edu.uoc.tfg.auction.domain.repository.AuctionRepository;
 import edu.uoc.tfg.auction.domain.repository.BidRepository;
 import javax.ws.rs.NotFoundException;
+
+import edu.uoc.tfg.auction.infrastructure.kafka.KafkaAuctionMessagingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +26,9 @@ import java.util.Optional;
 public class AuctionServiceImpl implements AuctionService{
 
     private final AuctionRepository auctionRepository;
-
     private final BidRepository bidRepository;
+
+    private final KafkaAuctionMessagingService kafkaAuctionMessagingService;
 
     @Override
     public Auction createAuction(Auction newAuction){
@@ -37,7 +40,11 @@ public class AuctionServiceImpl implements AuctionService{
             return currentAuction;
         }
 
-        return auctionRepository.editOrCreate(newAuction);
+        Auction createdAuction = auctionRepository.editOrCreate(newAuction);
+
+        kafkaAuctionMessagingService.sendCreatedMessage(createdAuction);
+
+        return createdAuction;
     }
 
     @Override
@@ -135,7 +142,7 @@ public class AuctionServiceImpl implements AuctionService{
             }
 
             //Aqui debo notificar via kafka para que el microservicio de property
-            // modifique a SOLD o VALIDATED en funcion de la winningBidId o si no hay
+            kafkaAuctionMessagingService.sendFinishedMessage(auction);
 
             updateAuction(auction);
 

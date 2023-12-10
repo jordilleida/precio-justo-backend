@@ -54,7 +54,7 @@ public class PropertyEntity implements DomainTranslatable<Property>  {
     @NotNull
     @JoinColumn(name = "postal_code_id")
     private PostalCodeEntity postalCode;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "property_id")
     private List<PropertyImageEntity> images;
     @Column(name = "created_at")
