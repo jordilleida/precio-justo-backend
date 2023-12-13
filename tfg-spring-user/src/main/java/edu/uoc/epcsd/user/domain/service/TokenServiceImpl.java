@@ -37,9 +37,9 @@ public class TokenServiceImpl implements TokenService {
         Date expiryDate = java.util.Date.from(session.getExpireDate().atZone(ZoneId.systemDefault()).toInstant());
 
 
-        String roles = user.getRoles().stream()
-                        .map(role -> role.getName().name())
-                        .collect(Collectors.joining(", "));
+        String roles =  user.getRoles().stream()
+                        .map(role -> role.getName().name().trim())
+                        .collect(Collectors.joining(","));
 
         return JWT.create()
                 .withSubject(user.getEmail())
