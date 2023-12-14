@@ -39,7 +39,7 @@ public class TokenServiceImpl implements TokenService {
 
         String roles =  user.getRoles().stream()
                         .map(role -> role.getName().name().trim())
-                        .collect(Collectors.joining(","));
+                        .collect(Collectors.joining(", "));
 
         return JWT.create()
                 .withSubject(user.getEmail())
