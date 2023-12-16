@@ -28,7 +28,7 @@ public class AuctionRepositoryImpl implements AuctionRepository {
     }
     @Override
     public Optional<Auction> findCurrentAuctionByPropertyId(Long propertyId) {
-        return auctionRepository.findFirstByPropertyIdOrderByEndDateDesc(propertyId)
+        return auctionRepository.findActiveAuctionByPropertyId(propertyId)
                 .map(AuctionEntity::toDomain);
     }
 

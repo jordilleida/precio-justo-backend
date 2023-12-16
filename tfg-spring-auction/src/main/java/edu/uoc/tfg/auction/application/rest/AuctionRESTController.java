@@ -57,7 +57,7 @@ public class AuctionRESTController {
         if(createdAuction == null)
             return ResponseEntity.unprocessableEntity().body("No se pudo crear la subasta");
 
-        return ResponseEntity.ok("Subasta creada con éxito con ID: " + createdAuction.getId());
+        return ResponseEntity.ok("Subasta creada con éxito con un precio de salida de " + createdAuction.getInitialPrice());
     }
 
     @GetMapping("/active")
