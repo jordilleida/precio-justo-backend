@@ -71,6 +71,18 @@ public class AuctionRESTController {
         return ResponseEntity.ok(activeAuctions);
     }
 
+    @GetMapping("/ended")
+    @PreAuthorize("hasRole('ROLE_SELLER')")
+    public ResponseEntity<List<Auction>> getLastAuctions() {
+
+        List<Auction> endedAuctions = auctionService.getLastAuctions();
+
+        if(endedAuctions.isEmpty())
+            return ResponseEntity.noContent().build();
+
+        return ResponseEntity.ok(endedAuctions);
+    }
+
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<List<Auction>> getAllAuctions() {

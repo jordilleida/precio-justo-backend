@@ -18,6 +18,7 @@ public interface AuctionService {
 
     List<Auction> getAllAuctions();
     List<Auction> getAllActiveAuctions();
+    List<Auction> getLastAuctions();
     void updateAuctionStatuses();
     BigDecimal placeBid(Long auctionId, BigDecimal amount, Long userId);
 

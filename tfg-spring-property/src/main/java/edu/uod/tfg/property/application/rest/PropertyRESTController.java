@@ -69,6 +69,19 @@ public class PropertyRESTController {
             return ResponseEntity.ok(properties);
         }
     }
+
+    @GetMapping("/property/{propertyId}")
+    @PreAuthorize("hasRole('ROLE_BUYER')")
+    public ResponseEntity<Property> getPropertyById(@PathVariable Long propertyId) {
+
+        Optional<Property> propertyOpt = propertyService.findPropertyById(propertyId);
+
+        if (propertyOpt.isPresent()) {
+            return ResponseEntity.ok(propertyOpt.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
     @GetMapping("/owners")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<List<OwnerHistory>> findOwners() {

@@ -77,6 +77,11 @@ public class AuctionServiceImpl implements AuctionService{
     public List<Auction> getAllActiveAuctions() {
         return auctionRepository.findAllAuctionsByStatus(AuctionStatus.ACTIVE.toString());
     }
+
+    @Override
+    public List<Auction> getLastAuctions() {
+        return auctionRepository.findAllAuctionsByStatus(AuctionStatus.ENDED.toString());
+    }
     @Override
     public BigDecimal placeBid(Long auctionId, BigDecimal amount, Long userId){
 
@@ -141,7 +146,7 @@ public class AuctionServiceImpl implements AuctionService{
 
             }
 
-            //Aqui debo notificar via kafka para que el microservicio de property
+            //Aqui debo notificar via kafka para que el microservicio de property haga lo propio
             kafkaAuctionMessagingService.sendFinishedMessage(auction);
 
             updateAuction(auction);
