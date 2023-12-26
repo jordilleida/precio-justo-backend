@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Component
@@ -22,9 +22,14 @@ public class MessageRepositoryImpl implements MessageRepository {
     }
 
     @Override
-    public List<Message> findUserMessages(Long id){
-        return messageJpaRepository.findBySenderIdAndAnswerToIsNull(id)
+    public List<Message> findUserMessages(Long userId){
+        return messageJpaRepository.findInitialMessagesByUserId(userId)
                                    .stream().map(MessageEntity::toDomain).collect(Collectors.toList());
+    }
+    @Override
+    public Optional<Message> findByAnswerTo(Long messageId){
+        return messageJpaRepository.findByAnswerTo(messageId)
+                .map(MessageEntity::toDomain);
     }
 
 }

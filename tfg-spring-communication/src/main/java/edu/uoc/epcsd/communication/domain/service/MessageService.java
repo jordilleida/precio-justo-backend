@@ -7,4 +7,5 @@ import java.util.List;
 public interface MessageService {
    boolean sendMessage(Message message);
    List<Message> findAllMessagesInicializedBy(Long userId);
+   List<Message> findAllReplies(Long initialMessageId);
 }

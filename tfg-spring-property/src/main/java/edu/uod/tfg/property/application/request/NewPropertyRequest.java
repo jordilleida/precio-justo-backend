@@ -3,7 +3,6 @@ package edu.uod.tfg.property.application.request;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import edu.uod.tfg.property.domain.model.PropertyType;
 import lombok.Getter;
 import lombok.Setter;
 
