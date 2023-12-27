@@ -32,7 +32,7 @@ public class CommunicationController {
         return ResponseEntity.ok(notifications);
     }
     @PostMapping("/messages")
-    public ResponseEntity<?> sendMessage(@RequestBody NewMessageRequest messageRequest) {
+    public ResponseEntity<String> sendMessage(@RequestBody NewMessageRequest messageRequest) {
 
         Message message = new Message(
                 null,
@@ -46,9 +46,9 @@ public class CommunicationController {
 
         boolean isSent = messageService.sendMessage(message);
         if (isSent) {
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok("Mensaje enviado con éxito");
         } else {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+            return ResponseEntity.unprocessableEntity().body("No se ha podido enviar el mensaje");
         }
     }
     @GetMapping("/messages/{userId}")
