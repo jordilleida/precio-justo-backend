@@ -9,6 +9,7 @@ import edu.uoc.epcsd.user.domain.UserSession;
 import edu.uoc.epcsd.user.domain.service.RoleService;
 import edu.uoc.epcsd.user.domain.service.TokenService;
 import edu.uoc.epcsd.user.domain.service.UserService;
+import edu.uoc.epcsd.user.infrastructure.kafka.KafkaUserMessagingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -31,6 +32,7 @@ public class UserRESTController {
     private final TokenService tokenService;
     private final RoleService roleService;
 
+    private final KafkaUserMessagingService kafkaUserMessagingService;
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequest loginRequest) {
 
@@ -88,9 +90,11 @@ public class UserRESTController {
         User userRequest = new User(null, registerRequest.getName(), registerRequest.getSurname(),
                 registerRequest.getMail(), registerRequest.getPassword(), roles, false);
 
-        Long userId = userService.createUser(userRequest);
+        User newUser = userService.createUser(userRequest);
 
-        log.info("createUser " + userId);
+        kafkaUserMessagingService.sendMessage(newUser);
+
+        log.info("createUser " + newUser.getId());
 
     	return ResponseEntity.ok().body(userRequest);
     }

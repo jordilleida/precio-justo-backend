@@ -72,7 +72,7 @@ public class AuctionRESTController {
     }
 
     @GetMapping("/ended")
-    @PreAuthorize("hasRole('ROLE_SELLER')")
+    @PreAuthorize("hasRole('ROLE_BUYER')")
     public ResponseEntity<List<Auction>> getLastAuctions() {
 
         List<Auction> endedAuctions = auctionService.getLastAuctions();
@@ -148,7 +148,7 @@ public class AuctionRESTController {
            if(savedAmount == null)
                return ResponseEntity.unprocessableEntity().body("La puja no es válida, pruebe de nuevo");
 
-            return ResponseEntity.ok("Puja realizada correctamente por " + savedAmount + " €");
+            return ResponseEntity.ok("Puja realizada correctamente por " + savedAmount + " EUR");
 
     }
 

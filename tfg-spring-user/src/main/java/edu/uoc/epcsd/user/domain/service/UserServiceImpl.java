@@ -22,7 +22,6 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
-    private final KafkaUserMessagingService kafkaUserMessagingService;
     @Override
     public List<User> findAllUsers() {
         return userRepository.findAllUsers();
@@ -39,13 +38,11 @@ public class UserServiceImpl implements UserService {
         return userRepository.findUserByMail(email);
     }
     @Override
-    public Long createUser(User user) {
+    public User createUser(User user) {
 
         User newUser = userRepository.createOrEditUser(user);
 
-        kafkaUserMessagingService.sendMessage(newUser);
-
-        return newUser.getId();
+        return newUser;
     }
 
     @Override

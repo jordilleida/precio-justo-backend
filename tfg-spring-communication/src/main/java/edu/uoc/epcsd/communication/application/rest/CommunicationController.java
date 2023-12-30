@@ -45,6 +45,7 @@ public class CommunicationController {
         );
 
         boolean isSent = messageService.sendMessage(message);
+
         if (isSent) {
             return ResponseEntity.ok("Mensaje enviado con éxito");
         } else {

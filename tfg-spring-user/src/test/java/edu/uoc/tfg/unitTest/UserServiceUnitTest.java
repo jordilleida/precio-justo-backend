@@ -1,4 +1,4 @@
-package edu.uoc.epcsd.unitTest;
+package edu.uoc.tfg.unitTest;
 
 
 import edu.uoc.epcsd.user.domain.User;
@@ -79,11 +79,11 @@ class UserServiceUnitTest {
 
         given(userRepository.createOrEditUser(any(User.class))).willReturn(mockUser);
 
-        Long newUserId = userService.createUser(user);
+        User newUser = userService.createUser(user);
 
         // Valido que el ID del usuario retornado es 1L
-        assertThat(newUserId).isNotNull();
-        assertThat(newUserId).isEqualTo(1L);
+        assertThat(newUser.getId()).isNotNull();
+        assertThat(newUser.getId()).isEqualTo(1L);
 
         // Verifico las interacciones con el mock
         verify(userRepository).createOrEditUser(any(User.class));

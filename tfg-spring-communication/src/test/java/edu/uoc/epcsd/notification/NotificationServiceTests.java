@@ -1,26 +1,79 @@
 package edu.uoc.epcsd.notification;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.springframework.boot.test.context.SpringBootTest;
-
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.SimpleMailMessage;
 import edu.uoc.epcsd.communication.domain.User;
+import edu.uoc.epcsd.communication.domain.Property;
+import edu.uoc.epcsd.communication.domain.repository.NotificationRepository;
 import edu.uoc.epcsd.communication.domain.service.NotificationServiceImpl;
 
-@SpringBootTest
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+@ExtendWith(MockitoExtension.class)
 class NotificationServiceTests {
+
+    @Mock
+    private NotificationRepository notificationRepository;
+
+    @Mock
+    private JavaMailSender mailSender;
+
     @InjectMocks
-    private NotificationServiceImpl notifyService;
+    private NotificationServiceImpl notificationService;
+
+    private User testUser;
+    private Property testProperty;
+
+    @BeforeEach
+    void setUp() {
+        testUser = new User();
+        testUser.setEmail("user@example.com");
+        testUser.setId(1L);
+
+        testProperty = new Property();
+        testProperty.setContact("contact@example.com");
+        testProperty.setCatastralReference("Ref1234");
+        testProperty.setId(2L);
+        testProperty.setUserId(1L);
+
+        doNothing().when(mailSender).send(any(SimpleMailMessage.class));
+    }
+
     @Test
-    @DisplayName("Send notification by User")
-    void NotifyByUser() {
+    @DisplayName("Notify User Registered")
+    void notifyUserRegistered() {
+        assertTrue(notificationService.notifyUserRegistered(testUser));
+        verify(mailSender, times(1)).send(any(SimpleMailMessage.class));
+    }
 
-    	User user = User.builder().email("test@test.com").fullName("Test user").id(1L).build();
+    @Test
+    @DisplayName("Notify Property Validated")
+    void notifyPropertyValidated() {
+        assertTrue(notificationService.notifyPropertyValidated(testProperty));
+        verify(mailSender, times(1)).send(any(SimpleMailMessage.class));
+    }
 
-    	Boolean result = notifyService.notifyUserRegistered(user);
-    	assertEquals(result, true);
+    @Test
+    @DisplayName("Notify Property Deleted")
+    void notifyPropertyDeleted() {
+        assertTrue(notificationService.notifyPropertyDeleted(testProperty));
+        verify(mailSender, times(1)).send(any(SimpleMailMessage.class));
+    }
+
+    @Test
+    @DisplayName("Notify Change Request")
+    void notifyChangeRequest() {
+        assertTrue(notificationService.notifyChangeRequest(testProperty));
+        verify(mailSender, times(1)).send(any(SimpleMailMessage.class));
     }
 }
+
